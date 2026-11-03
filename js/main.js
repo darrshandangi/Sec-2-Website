@@ -260,7 +260,7 @@
 
     function startAutoSlide() {
       stopAutoSlide();
-      autoSlideTimer = setInterval(nextSlide, 5000);
+      autoSlideTimer = setInterval(nextSlide, 3500);
     }
 
     function stopAutoSlide() {

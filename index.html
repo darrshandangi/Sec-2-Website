@@ -82,6 +82,39 @@
   padding: 8px 18px !important;
 }
 
+
+/* Ensure Visual Gallery Carousel displays slides strictly in a horizontal row moving right-to-left */
+#lifestyle-gallery .carousel-track-wrapper {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08) !important;
+  background: #FAF8F5 !important;
+}
+#lifestyle-gallery .carousel-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  will-change: transform !important;
+}
+#lifestyle-gallery .carousel-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+#lifestyle-gallery .carousel-slide img {
+  width: 100% !important;
+  height: clamp(380px, 55vh, 600px) !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
 </style>
 </head>
 <body>
