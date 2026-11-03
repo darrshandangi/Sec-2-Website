@@ -1496,39 +1496,63 @@ button {
 }
 
 /* Support Page Enhanced Styles (contact.html) */
-.support-hero-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+.pamphlet-display-section {
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
-.support-photo-card {
-  border-radius: var(--radius-lg);
+.pamphlet-side-by-side {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 780px;
+  margin-inline: auto;
+}
+.pamphlet-card {
+  flex: 1;
+  max-width: 360px;
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border-light);
-  background: var(--bg-white);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.support-photo-card:hover {
+.pamphlet-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
-.support-photo-card img {
+.pamphlet-card img {
   width: 100%;
-  height: 480px;
-  object-fit: cover;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
   display: block;
+  background: #FAF9F6;
 }
-.support-photo-caption {
-  padding: 16px 20px;
+.pamphlet-card-label {
+  padding: 10px 14px;
   background: #FFFFFF;
   border-top: 1px solid var(--border-light);
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
   text-align: center;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 680px) {
+  .pamphlet-side-by-side {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .pamphlet-card img {
+    max-height: 300px;
+  }
+  .pamphlet-card-label {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
 }
 
 .order-tracker-card {
@@ -1651,7 +1675,6 @@ button {
 
 /* Responsive updates */
 @media (max-width: 992px) {
-  .support-hero-gallery,
   .support-policy-grid,
   .trust-legal-box {
     grid-template-columns: 1fr;
@@ -1659,9 +1682,6 @@ button {
   }
   .contact-quick-cards-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .support-photo-card img {
-    height: 380px;
   }
 }
 
