@@ -3,10 +3,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact us (25BC148) | FoldBeat Support Hub & Concierge</title>
+  <title>Contact us (25BC148) | FoldBeat Support & Concierge</title>
   
   <meta name="description" content="Official FoldBeat Support Hub: Order tracking, 1-year doorstep warranty claims, hassle-free returns, care guide, WhatsApp concierge, and corporate gifting.">
   <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    /* Premium Visual Enhancements for Support Hub (25BC148) */
+    .support-hero-banner {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+      padding: 70px 0 50px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .support-hero-title {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .support-hero-lead {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* Small & Side-by-Side Pamphlet Cards */
+    .brochure-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .brochure-card {
+      flex: 1;
+      max-width: 250px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-align: center;
+    }
+    .brochure-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+      border-color: var(--accent-gold);
+    }
+    .brochure-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      display: block;
+      background: #FAF9F6;
+      padding: 6px;
+    }
+    .brochure-badge {
+      background: #FFFFFF;
+      padding: 10px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      border-top: 1px solid var(--border-light);
+      letter-spacing: 0.04em;
+    }
+
+    /* Order Tracker Visual Bar */
+    .tracker-box {
+      background: linear-gradient(135deg, #FAF8F2 0%, #FFFFFF 100%);
+      border: 1px solid #EFE4CC;
+      border-radius: 16px;
+      padding: 44px 32px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+      margin: 60px auto;
+      max-width: 860px;
+      text-align: center;
+    }
+    .tracker-form-row {
+      display: flex;
+      gap: 12px;
+      max-width: 640px;
+      margin: 24px auto 0;
+      flex-wrap: wrap;
+    }
+    .tracker-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 20px;
+      border: 1px solid var(--border-light);
+      border-radius: 9999px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: #FFFFFF;
+      outline: none;
+    }
+    .tracker-input:focus {
+      border-color: var(--accent-gold);
+    }
+
+    /* Support Feature Cards (3 Pillars) */
+    .pillar-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 50px 0 80px;
+    }
+    .pillar-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow-subtle);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-gold);
+    }
+    .pillar-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-stone);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+      color: var(--accent-gold);
+    }
+    .pillar-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .pillar-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .pillar-card a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Policy Visual Sections with Lifestyle Imagery */
+    .policy-showcase-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 0;
+      border-top: 1px solid var(--border-light);
+    }
+    .policy-showcase-row.reverse {
+      direction: rtl;
+    }
+    .policy-showcase-row.reverse > * {
+      direction: ltr;
+    }
+    .policy-photo-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-light);
+      background: var(--bg-stone);
+    }
+    .policy-photo-frame img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Contact Information Cards (Relocated to End of Page) */
+    .contact-end-section {
+      background: linear-gradient(180deg, #FAF8F2 0%, #FFFFFF 100%);
+      padding: 90px 0 80px;
+      border-top: 1px solid #EFE4CC;
+    }
+    .contact-end-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+    .contact-cards-4grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    .contact-info-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+    }
+    .contact-info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-color: var(--accent-gold);
+    }
+    .contact-info-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .contact-info-card h4 {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    .contact-info-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+    .contact-info-card a.action-link {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: inline-block;
+    }
+
+    /* Contact Form Stylized Container */
+    .contact-form-container {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.06);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 992px) {
+      .pillar-cards-grid,
+      .policy-showcase-row,
+      .contact-cards-4grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .policy-photo-frame img {
+        height: 280px;
+      }
+    }
+    @media (max-width: 600px) {
+      .brochure-container {
+        flex-direction: row;
+        gap: 12px;
+      }
+      .brochure-card img {
+        height: 200px;
+      }
+      .contact-form-container {
+        padding: 24px 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -40,163 +311,109 @@
 
   <main>
 
-    <!-- 1. Hero & Starting Feature Images -->
-    <section class="support-hero-section">
+    <!-- 1. Hero Banner with Small Side-by-Side Pamphlet Cards -->
+    <section class="support-hero-banner">
       <div class="container">
-        <span class="editorial-sub">Customer Care & Concierge</span>
-        <h1>Contact us (25BC148)</h1>
-        <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin-inline: auto;">
-          Welcome to the dedicated FoldBeat Concierge & Support Hub. From instant order tracking to seamless doorstep warranty claims and custom B2B curation, our team is here for you.
+        <span class="editorial-sub">Customer Care & Support Hub</span>
+        <h1 class="support-hero-title">Support Hub (25BC148)</h1>
+        <p class="support-hero-lead">
+          Welcome to the dedicated FoldBeat Concierge & Assistance Center. Explore order tracking, our 1-year doorstep warranty, care instructions, or reach our concierge team below.
         </p>
 
-        <!-- Starting Featured Pamphlet / Flyer (Compact & Side-by-Side) -->
-        <div style="margin: 32px auto 20px; max-width: 580px;">
-          <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
-            
-            <div style="flex: 1; max-width: 270px; background: #FFFFFF; border-radius: 8px; overflow: hidden; border: 1px solid #EAEBED; box-shadow: 0 4px 18px rgba(0,0,0,0.06); text-align: center;">
-              <a href="images/bhawana-1-148.jpeg" target="_blank" title="Click to view full brochure" style="display: block;">
-                <img src="images/bhawana-1-148.jpeg" alt="FoldBeat Pamphlet Front" style="width: 100%; height: auto; max-height: 340px; object-fit: contain; display: block; background: #FAF9F6;">
-              </a>
-              <div style="padding: 8px 12px; font-size: 0.75rem; font-weight: 600; color: #11161F; background: #FFFFFF; border-top: 1px solid #EAEBED;">
-                Official Brochure (Front) 🔍
-              </div>
-            </div>
-
-            <div style="flex: 1; max-width: 270px; background: #FFFFFF; border-radius: 8px; overflow: hidden; border: 1px solid #EAEBED; box-shadow: 0 4px 18px rgba(0,0,0,0.06); text-align: center;">
-              <a href="images/bhawana-2-148.jpeg" target="_blank" title="Click to view full brochure" style="display: block;">
-                <img src="images/bhawana-2-148.jpeg" alt="FoldBeat Pamphlet Back" style="width: 100%; height: auto; max-height: 340px; object-fit: contain; display: block; background: #FAF9F6;">
-              </a>
-              <div style="padding: 8px 12px; font-size: 0.75rem; font-weight: 600; color: #11161F; background: #FFFFFF; border-top: 1px solid #EAEBED;">
-                Brochure & Specs (Back) 🔍
-              </div>
-            </div>
-
-          </div>
-          <p style="font-size: 0.75rem; color: #868E9E; text-align: center; margin-top: 10px;">
-            (Click either panel to view or download high-resolution flyer)
-          </p>
-        </div>
-
-        <!-- 2. Quick Contact Cards -->
-        <div class="contact-quick-cards-grid">
-          <div class="contact-quick-card">
-            <div class="card-icon">💬</div>
-            <h4>WhatsApp Concierge</h4>
-            <p>Instant chat with our product specialists.</p>
-            <p><strong>+91 90300 00000</strong></p>
-            <a href="https://wa.me/919030000000?text=Hi%20FoldBeat%20Support" target="_blank" rel="noopener" class="card-action">Chat on WhatsApp →</a>
+        <!-- Compact Side-by-Side Pamphlet Cards -->
+        <div class="brochure-container">
+          <div class="brochure-card">
+            <a href="images/bhawana-1-148.jpeg" target="_blank" title="Click to view full brochure">
+              <img src="images/bhawana-1-148.jpeg" alt="FoldBeat Official Pamphlet Front (25BC148)">
+            </a>
+            <div class="brochure-badge">Official Brochure (Front) 🔍</div>
           </div>
 
-          <div class="contact-quick-card">
-            <div class="card-icon">📞</div>
-            <h4>Phone Assistance</h4>
-            <p>Mon–Sat, 10:00 AM – 7:00 PM IST.</p>
-            <p><strong>+91 90300 00000</strong></p>
-            <a href="tel:+919030000000" class="card-action">Call Support →</a>
-          </div>
-
-          <div class="contact-quick-card">
-            <div class="card-icon">✉️</div>
-            <h4>General Concierge</h4>
-            <p>Order queries, delivery, and setup help.</p>
-            <p><strong>concierge@foldbeat.com</strong></p>
-            <a href="mailto:concierge@foldbeat.com" class="card-action">Write An Email →</a>
-          </div>
-
-          <div class="contact-quick-card">
-            <div class="card-icon">🏛️</div>
-            <h4>Corporate & Press</h4>
-            <p>Bulk gifting and media inquiries.</p>
-            <p><strong>corporate@foldbeat.com</strong></p>
-            <a href="mailto:corporate@foldbeat.com" class="card-action">B2B Curation Desk →</a>
+          <div class="brochure-card">
+            <a href="images/bhawana-2-148.jpeg" target="_blank" title="Click to view full brochure">
+              <img src="images/bhawana-2-148.jpeg" alt="FoldBeat Official Pamphlet Back (25BC148)">
+            </a>
+            <div class="brochure-badge">Acoustic Specs (Back) 🔍</div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 3. Prominent Order Tracking Portal -->
-    <section class="container" style="padding-top: 10px;">
-      <div class="order-tracker-card">
+    <!-- 2. Order Tracking Portal (Near Top) -->
+    <section class="container">
+      <div class="tracker-box">
         <span class="editorial-sub" style="color: var(--accent-gold);">Real-Time Dispatch Tracking</span>
         <h2 style="margin-bottom: 12px;">Track Your Shipment</h2>
-        <p style="max-width: 620px; margin-inline: auto; font-size: 1.05rem;">
+        <p style="max-width: 620px; margin: 0 auto; font-size: 1.05rem; color: var(--text-secondary);">
           Already placed an order? Instantly check your shipment status and real-time delivery updates through our Order Tracking Portal.
         </p>
 
-        <form class="order-tracker-form" onsubmit="event.preventDefault(); alert('Order Status for ' + document.getElementById('track-order-num').value + ':\n\nStatus: Dispatched via Bluedart Express Air ✈️\nEstimated Delivery: 2 Business Days\nTracking AWB: FB-' + Math.floor(100000 + Math.random() * 900000));">
-          <input type="text" id="track-order-num" class="order-tracker-input" placeholder="Order ID (e.g. FB-84920)" required>
-          <input type="email" class="order-tracker-input" placeholder="Registered Email Address" required>
+        <form class="tracker-form-row" onsubmit="event.preventDefault(); alert('Order Status for ' + document.getElementById('track-order-num').value + ':\n\nStatus: Dispatched via Bluedart Express Air ✈️\nEstimated Delivery: 2 Business Days\nTracking AWB: FB-' + Math.floor(100000 + Math.random() * 900000));">
+          <input type="text" id="track-order-num" class="tracker-input" placeholder="Order ID (e.g. FB-84920)" required>
+          <input type="email" class="tracker-input" placeholder="Registered Email Address" required>
           <button type="submit" class="btn-pantheone btn-dark">Track Order →</button>
         </form>
       </div>
     </section>
 
-    <!-- 4. Support Cards with Anchors (Fixing dead links) -->
-    <section class="container" style="padding-bottom: 60px;">
-      <div class="support-cards-grid">
-        <div class="support-card">
-          <div style="font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 8px;">🛡️</div>
-          <h4>1-Year Doorstep Warranty</h4>
-          <p>Comprehensive coverage for hinge mechanics, drivers, and battery. Free doorstep pickup & rapid unit replacement.</p>
-          <a href="#warranty" class="link-action">File A Claim (#warranty) →</a>
+    <!-- 3. Support Cards with Anchors (Working Links) -->
+    <section class="container">
+      <div class="pillar-cards-grid">
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-card-icon">🛡️</div>
+            <h3>1-Year Doorstep Warranty</h3>
+            <p>Comprehensive coverage for hinge mechanics, drivers, and battery. Free doorstep pickup & rapid unit replacement.</p>
+          </div>
+          <a href="#warranty">File A Claim (#warranty) →</a>
         </div>
 
-        <div class="support-card">
-          <div style="font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 8px;">✨</div>
-          <h4>Care & Quick Setup</h4>
-          <p>Maintenance advice, LED indicators, charging specifications, and downloadable digital owner guide.</p>
-          <a href="#care" class="link-action">Care Instructions (#care) →</a>
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-card-icon">✨</div>
+            <h3>Care & Quick Setup</h3>
+            <p>Maintenance advice, LED indicators, charging specifications, and downloadable digital owner guide.</p>
+          </div>
+          <a href="#care">Care Instructions (#care) →</a>
         </div>
 
-        <div class="support-card">
-          <div style="font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 8px;">📦</div>
-          <h4>Shipping & 7-Day Returns</h4>
-          <p>Express 2–4 day metro dispatch, tracking updates, and 100% money-back guarantee within 7 days.</p>
-          <a href="#returns" class="link-action">Return Policy (#returns) →</a>
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-card-icon">📦</div>
+            <h3>Shipping & 7-Day Returns</h3>
+            <p>Express 2–4 day metro dispatch, tracking updates, and 100% money-back guarantee within 7 days.</p>
+          </div>
+          <a href="#returns">Return Policy (#returns) →</a>
         </div>
       </div>
     </section>
 
-    <!-- 5. Shipping & Order Inquiries (#shipping) -->
-    <section id="shipping" class="support-policy-section" style="background: var(--bg-stone);">
+    <!-- 4. Shipping & Logistics Section (#shipping) with Lifestyle Visual -->
+    <section id="shipping" style="background: var(--bg-stone);">
       <div class="container">
-        <div class="support-policy-grid">
+        <div class="policy-showcase-row">
+          <div class="policy-photo-frame">
+            <img src="images/foldbeat-marble-sunlight.jpg" alt="FoldBeat speaker delivered on modern desk">
+          </div>
           <div>
             <span class="editorial-sub">Logistics & Fulfilment</span>
-            <h2>Shipping & Order Inquiries</h2>
-            <p>Every FoldBeat speaker is dispatched in protective vibration-damped packaging from our central fulfilment warehouse.</p>
-          </div>
-          <div>
-            <div class="support-step-item" style="margin-bottom: 14px;">
-              <div class="support-step-num">🚀</div>
-              <div>
-                <h4 style="margin-bottom: 4px;">Delivery Timelines</h4>
-                <p style="font-size: 0.92rem;"><strong>Metro Cities:</strong> 2–4 business days via Bluedart Express Air.<br><strong>Non-Metro & Tier 2/3 Regions:</strong> 4–7 business days with end-to-end tracking.</p>
-              </div>
-            </div>
+            <h2 style="margin-bottom: 20px;">Shipping & Order Inquiries</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+              Every FoldBeat speaker is dispatched in protective vibration-damped packaging from our central fulfilment warehouse.
+            </p>
 
-            <div class="support-step-item" style="margin-bottom: 14px;">
-              <div class="support-step-num">📲</div>
-              <div>
-                <h4 style="margin-bottom: 4px;">Automated Tracking Alerts</h4>
-                <p style="font-size: 0.92rem;">Once your package is scanned at the hub, automated SMS and email notifications containing your live courier AWB link are dispatched immediately.</p>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 8px; padding: 16px 20px;">
+                <strong>🚀 Delivery Timelines:</strong> 2–4 business days for metro cities; 4–7 business days for non-metro regions.
               </div>
-            </div>
-
-            <div class="support-step-item" style="margin-bottom: 14px;">
-              <div class="support-step-num">⏱️</div>
-              <div>
-                <h4 style="margin-bottom: 4px;">Cancellations & Address Modifications</h4>
-                <p style="font-size: 0.92rem;">Allowed before dispatch, within <strong>12 hours</strong> of placing your order. Simply contact our concierge via WhatsApp or email with your order number.</p>
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 8px; padding: 16px 20px;">
+                <strong>📲 Real-Time Tracking:</strong> Automated SMS and courier tracking links dispatched immediately upon hub scan.
               </div>
-            </div>
-
-            <div class="support-step-item">
-              <div class="support-step-num">🇮🇳</div>
-              <div>
-                <h4 style="margin-bottom: 4px;">Shipping Coverage</h4>
-                <p style="font-size: 0.92rem;">We currently deliver nationwide across 19,000+ PIN codes in India. (International cross-border shipping is scheduled for late 2026).</p>
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 8px; padding: 16px 20px;">
+                <strong>⏱️ Cancellations:</strong> Free order cancellation or address changes permitted within 12 hours of ordering.
+              </div>
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 8px; padding: 16px 20px;">
+                <strong>🇮🇳 Coverage:</strong> Nationwide delivery across 19,000+ PIN codes in India.
               </div>
             </div>
           </div>
@@ -204,199 +421,80 @@
       </div>
     </section>
 
-    <!-- 6. Warranty & Claims (#warranty) -->
-    <section id="warranty" class="support-policy-section">
+    <!-- 5. Warranty & Doorstep Claims (#warranty) with Macro Visual -->
+    <section id="warranty">
       <div class="container">
-        <div class="support-policy-grid">
+        <div class="policy-showcase-row reverse">
+          <div class="policy-photo-frame">
+            <img src="images/foldbeat-macro-detail.jpg" alt="FoldBeat macro engineering detail of gold hinge">
+          </div>
           <div>
             <span class="editorial-sub">Hassle-Free Protection</span>
-            <h2>1-Year Doorstep Warranty & Claims</h2>
-            <p>We stand behind the mechanical integrity and acoustic fidelity of FoldBeat with an uncompromising doorstep replacement warranty.</p>
-            
-            <div style="background: #FAF8F2; border-left: 3px solid var(--accent-gold); padding: 18px; border-radius: 4px; margin-top: 24px;">
+            <h2 style="margin-bottom: 20px;">1-Year Doorstep Warranty & Claims</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+              We stand behind the mechanical integrity and acoustic fidelity of FoldBeat with an uncompromising doorstep replacement warranty.
+            </p>
+
+            <div style="background: #FAF8F2; border-left: 3px solid var(--accent-gold); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px;">
               <h4 style="color: #111822; margin-bottom: 4px;">Damaged on Arrival (DOA) Guarantee</h4>
               <p style="font-size: 0.88rem; color: #5C5242; margin: 0;">
                 Received a damaged box or transit-impacted unit? Notify our concierge within <strong>48 hours of delivery</strong> with unboxing photos, and we will expedite an instant priority replacement without delay.
               </p>
             </div>
-          </div>
 
-          <div>
-            <h4 style="margin-bottom: 12px;">How to File a Doorstep Claim:</h4>
-            <div class="support-steps-list">
-              <div class="support-step-item">
-                <div class="support-step-num">01</div>
-                <div>
-                  <strong>Initiate Claim:</strong> Submit the contact form below or email <a href="mailto:concierge@foldbeat.com" style="color: var(--accent-gold); text-decoration: underline;">concierge@foldbeat.com</a> with a brief video demonstrating the issue.
-                </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div style="background: #F0FDF4; border: 1px solid #DCFCE7; padding: 14px; border-radius: 8px;">
+                <h5 style="color: #166534; margin-bottom: 4px;">✓ What's Covered</h5>
+                <p style="font-size: 0.8rem; color: #14532D; margin: 0;">Dual-axis hinge friction, 45mm drivers, internal battery, and Type-C charging port.</p>
               </div>
-              <div class="support-step-item">
-                <div class="support-step-num">02</div>
-                <div>
-                  <strong>Verification within 24 Hours:</strong> Our technical team reviews the issue and approves the warranty claim.
-                </div>
-              </div>
-              <div class="support-step-item">
-                <div class="support-step-num">03</div>
-                <div>
-                  <strong>Doorstep Pickup:</strong> A pre-paid courier collects the unit directly from your home or office address at a time of your choice.
-                </div>
-              </div>
-              <div class="support-step-item">
-                <div class="support-step-num">04</div>
-                <div>
-                  <strong>Brand New Replacement:</strong> A brand-new unit is dispatched directly to your doorstep.
-                </div>
+              <div style="background: #FEF2F2; border: 1px solid #FEE2E2; padding: 14px; border-radius: 8px;">
+                <h5 style="color: #991B1B; margin-bottom: 4px;">✗ Not Covered</h5>
+                <p style="font-size: 0.8rem; color: #7F1D1D; margin: 0;">Total liquid submersion beyond IPX4 splash limits or severe drop damage.</p>
               </div>
             </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;">
-              <div style="background: #F0FDF4; border: 1px solid #DCFCE7; padding: 16px; border-radius: 8px;">
-                <h5 style="color: #166534; margin-bottom: 6px;">✓ What's Covered</h5>
-                <ul style="font-size: 0.82rem; color: #14532D; padding-left: 18px; margin: 0;">
-                  <li>Dual-axis hinge tension & friction hold</li>
-                  <li>Internal neodymium drivers & sound coil</li>
-                  <li>Type-C charging port & power management</li>
-                  <li>Battery degradation below 80% in 1 year</li>
-                </ul>
-              </div>
-
-              <div style="background: #FEF2F2; border: 1px solid #FEE2E2; padding: 16px; border-radius: 8px;">
-                <h5 style="color: #991B1B; margin-bottom: 6px;">✗ What's Not Covered</h5>
-                <ul style="font-size: 0.82rem; color: #7F1D1D; padding-left: 18px; margin: 0;">
-                  <li>Submersion beyond IPX4 splash limits</li>
-                  <li>Severe cosmetic scratches from sharp objects</li>
-                  <li>Intentional disassembly or third-party repair</li>
-                </ul>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7. Returns & Refunds (#returns) -->
-    <section id="returns" class="support-policy-section" style="background: var(--bg-stone);">
+    <!-- 6. Returns & Refunds (#returns) -->
+    <section id="returns" style="background: var(--bg-stone); padding: 80px 0;">
+      <div class="container container-narrow" style="text-align: center;">
+        <span class="editorial-sub">Satisfaction Guaranteed</span>
+        <h2 style="margin-bottom: 18px;">7-Day Return Policy & Refunds</h2>
+        <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 16px; padding: 36px 32px; box-shadow: var(--shadow-subtle); margin-top: 24px;">
+          <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); font-style: italic; line-height: 1.6; margin-bottom: 24px;">
+            “Returns are accepted within 7 days of delivery, provided the speaker is returned in its original, undamaged packaging with all included braided cables and an unblemished satin chassis. Refunds are credited back to your original payment method within 5–7 business days following inspection at our central warehouse.”
+          </blockquote>
+          <a href="#contact-end" class="btn-pantheone btn-dark btn-sm">Request a Return Form</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Care & Quick Setup Guide (#care, #guide) -->
+    <section id="care" style="padding: 90px 0;">
       <div class="container">
-        <div class="support-policy-grid">
-          <div>
-            <span class="editorial-sub">Satisfaction Guaranteed</span>
-            <h2>7-Day Return Policy & Refunds</h2>
-            <p>
-              We want you to experience FoldBeat in your own living space with absolute peace of mind.
-            </p>
-          </div>
-          <div>
-            <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-subtle);">
-              <blockquote style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-primary); font-style: italic; line-height: 1.6; margin-bottom: 20px;">
-                “Returns are accepted within 7 days of delivery, provided the speaker is returned in its original, undamaged packaging with all included braided cables and an unblemished satin chassis. Refunds are credited back to your original payment method within 5–7 business days following inspection at our central warehouse.”
-              </blockquote>
-              <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-                <a href="#contact" class="btn-pantheone btn-dark btn-sm">Request a Return</a>
-                <a href="https://wa.me/919030000000?text=I%20would%20like%20to%20request%20a%20return" class="btn-pantheone btn-outline btn-sm">WhatsApp Assistance</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. Interactive Contact Form with Validation & Reason Dropdown -->
-    <section id="contact" style="padding: 100px 0;">
-      <div class="container container-narrow">
-        <div style="text-align: center; margin-bottom: 48px;">
-          <span class="editorial-sub">Direct Inquiries</span>
-          <h2>Send a Message to Concierge</h2>
-          <p>Fill out the form below. Messages are monitored directly by our executive concierge desk with an average response time under 4 hours.</p>
-        </div>
-
-        <form id="support-contact-form" style="display: flex; flex-direction: column; gap: 20px;" onsubmit="event.preventDefault(); alert('✨ Thank you, ' + document.getElementById('cf-name').value + '!\n\nYour support ticket has been logged and sent to concierge@foldbeat.com.\nA confirmation receipt has been dispatched to ' + document.getElementById('cf-email').value + '. Our team will respond within 4 hours.'); this.reset();">
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-              <label for="cf-name" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Your Full Name *</label>
-              <input type="text" id="cf-name" required placeholder="e.g. Bhawana Sharma" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
-            </div>
-
-            <div>
-              <label for="cf-email" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Email Address *</label>
-              <input type="email" id="cf-email" required placeholder="bhawana@example.com" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
-            </div>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-              <label for="cf-phone" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Phone Number (Optional)</label>
-              <input type="tel" id="cf-phone" placeholder="+91 98765 43210" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
-            </div>
-
-            <div>
-              <label for="cf-reason" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Reason for Inquiry *</label>
-              <select id="cf-reason" required style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none; background: #FFF;">
-                <option value="">Select a Category...</option>
-                <option value="Order Tracking">Order & Tracking Inquiry</option>
-                <option value="Warranty Claim">1-Year Warranty Claim</option>
-                <option value="7-Day Return">7-Day Return & Refund</option>
-                <option value="Press">Press & Media Inquiries</option>
-                <option value="Corporate Gifting">Corporate Gifting & B2B Trade</option>
-                <option value="Other">Other Question</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label for="cf-order" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Order ID (If Applicable)</label>
-            <input type="text" id="cf-order" placeholder="e.g. FB-84920" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
-          </div>
-
-          <div>
-            <label for="cf-message" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Your Message *</label>
-            <textarea id="cf-message" rows="5" required placeholder="Please provide details regarding your inquiry..." style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;"></textarea>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <input type="checkbox" id="cf-consent" required style="width: 18px; height: 18px; accent-color: var(--accent-gold);">
-            <label for="cf-consent" style="font-size: 0.85rem; color: var(--text-secondary);">
-              I agree to the processing of my details according to FoldBeat's <a href="#trust" style="color: var(--accent-gold); text-decoration: underline;">Privacy Policy</a>.
-            </label>
-          </div>
-
-          <!-- Honeypot spam field for bots -->
-          <input type="text" style="display:none;" tabindex="-1" autocomplete="off">
-
-          <button type="submit" class="btn-pantheone btn-dark" style="width: 100%; padding: 16px;">
-            Send Message To Concierge (concierge@foldbeat.com)
-          </button>
-        </form>
-
-      </div>
-    </section>
-
-    <!-- 9. Care & Quick Setup Guide (#care, #guide) -->
-    <section id="care" class="support-policy-section" style="background: var(--bg-stone);">
-      <div class="container">
-        <div style="text-align: center; max-width: 680px; margin-inline: auto; margin-bottom: 48px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
           <span class="editorial-sub">Longevity & Performance</span>
           <h2>Care & Quick Setup Guide</h2>
           <p>Proper maintenance ensures that FoldBeat retains its acoustic resonance and pristine architectural finish for years.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
-          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 28px;">
-            <div style="font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 8px;">🧼</div>
+          <div style="background: var(--bg-stone); border: 1px solid var(--border-light); border-radius: 12px; padding: 28px;">
+            <div style="font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 10px;">🧼</div>
             <h4>Chassis Care</h4>
             <p style="font-size: 0.9rem; line-height: 1.6;">Wipe the composite satin panels with a clean, dry microfiber cloth. Avoid alcohol, harsh acetone, or abrasive cleaning chemicals.</p>
           </div>
 
-          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 28px;">
-            <div style="font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 8px;">💧</div>
+          <div style="background: var(--bg-stone); border: 1px solid var(--border-light); border-radius: 12px; padding: 28px;">
+            <div style="font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 10px;">💧</div>
             <h4>IPX4 Water Limits</h4>
             <p style="font-size: 0.9rem; line-height: 1.6;">FoldBeat withstands desk beverage spills, kitchen splashes, and light rain. It is not designed for total water submersion or pool diving.</p>
           </div>
 
-          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 28px;">
-            <div style="font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 8px;">⚡</div>
+          <div style="background: var(--bg-stone); border: 1px solid var(--border-light); border-radius: 12px; padding: 28px;">
+            <div style="font-size: 1.6rem; color: var(--accent-gold); margin-bottom: 10px;">⚡</div>
             <h4>Charging Specifications</h4>
             <p style="font-size: 0.9rem; line-height: 1.6;">Use a standard 5V/2A or 9V/2A USB-C power adapter. <strong>LED Meanings:</strong> Solid Amber = Charging, Solid White = Fully Charged, Blinking Blue = Pairing Mode.</p>
           </div>
@@ -408,10 +506,10 @@
       </div>
     </section>
 
-    <!-- 10. FAQ Accordion (Support-Focused) -->
-    <section class="faq-section" style="background: #FFFFFF;">
+    <!-- 8. FAQ Accordion (Support-Focused) -->
+    <section class="faq-section" style="background: var(--bg-stone); padding: 90px 0;">
       <div class="container">
-        <div style="text-align: center; max-width: 600px; margin-inline: auto;">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
           <span class="editorial-sub">Support Resolutions</span>
           <h2>Frequently Asked Questions</h2>
         </div>
@@ -460,7 +558,121 @@
       </div>
     </section>
 
-    <!-- 11. Corporate Gifting & Interior Design Trade -->
+    <!-- 9. CONTACT INFORMATION CARDS & FORM (PLACED AT THE END OF THE PAGE) -->
+    <section id="contact-end" class="contact-end-section">
+      <div class="container">
+        <div class="contact-end-header">
+          <span class="editorial-sub" style="color: var(--accent-gold);">Connect With Us</span>
+          <h2 style="font-size: 2.8rem; margin-bottom: 14px;">Contact FoldBeat Concierge</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary);">
+            Our dedicated support desk is available Monday through Saturday. Choose your preferred channel or send us a direct message below.
+          </p>
+        </div>
+
+        <!-- 4 Quick Contact Cards -->
+        <div class="contact-cards-4grid">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">💬</div>
+            <h4>WhatsApp Concierge</h4>
+            <p>Instant chat with our product specialists.</p>
+            <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">+91 90300 00000</p>
+            <a href="https://wa.me/919030000000?text=Hi%20FoldBeat%20Support" target="_blank" rel="noopener" class="action-link">Chat on WhatsApp →</a>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📞</div>
+            <h4>Phone Assistance</h4>
+            <p>Mon–Sat, 10:00 AM – 7:00 PM IST.</p>
+            <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">+91 90300 00000</p>
+            <a href="tel:+919030000000" class="action-link">Call Support Desk →</a>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <h4>General Concierge</h4>
+            <p>Order queries, delivery, and setup help.</p>
+            <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">concierge@foldbeat.com</p>
+            <a href="mailto:concierge@foldbeat.com" class="action-link">Write An Email →</a>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🏛️</div>
+            <h4>Corporate & Press</h4>
+            <p>Bulk gifting and media inquiries.</p>
+            <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">corporate@foldbeat.com</p>
+            <a href="mailto:corporate@foldbeat.com" class="action-link">B2B Curation Desk →</a>
+          </div>
+        </div>
+
+        <!-- Direct Contact Form -->
+        <div class="contact-form-container">
+          <div style="text-align: center; margin-bottom: 36px;">
+            <span class="editorial-sub">Direct Ticket</span>
+            <h3 style="font-size: 2.2rem; margin-bottom: 10px;">Send a Direct Message</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">Average concierge reply time is under 4 business hours.</p>
+          </div>
+
+          <form id="support-contact-form" style="display: flex; flex-direction: column; gap: 20px;" onsubmit="event.preventDefault(); alert('✨ Thank you, ' + document.getElementById('cf-name').value + '!\n\nYour support ticket has been logged and sent to concierge@foldbeat.com.\nA confirmation receipt has been dispatched to ' + document.getElementById('cf-email').value + '. Our team will respond within 4 hours.'); this.reset();">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div>
+                <label for="cf-name" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Your Full Name *</label>
+                <input type="text" id="cf-name" required placeholder="e.g. Bhawana Sharma" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
+              </div>
+
+              <div>
+                <label for="cf-email" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Email Address *</label>
+                <input type="email" id="cf-email" required placeholder="bhawana@example.com" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div>
+                <label for="cf-phone" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Phone Number (Optional)</label>
+                <input type="tel" id="cf-phone" placeholder="+91 98765 43210" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
+              </div>
+
+              <div>
+                <label for="cf-reason" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Reason for Inquiry *</label>
+                <select id="cf-reason" required style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none; background: #FFF;">
+                  <option value="">Select a Category...</option>
+                  <option value="Order Tracking">Order & Tracking Inquiry</option>
+                  <option value="Warranty Claim">1-Year Warranty Claim</option>
+                  <option value="7-Day Return">7-Day Return & Refund</option>
+                  <option value="Press">Press & Media Inquiries</option>
+                  <option value="Corporate Gifting">Corporate Gifting & B2B Trade</option>
+                  <option value="Other">Other Question</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="cf-order" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Order ID (If Applicable)</label>
+              <input type="text" id="cf-order" placeholder="e.g. FB-84920" style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;">
+            </div>
+
+            <div>
+              <label for="cf-message" style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Your Message *</label>
+              <textarea id="cf-message" rows="5" required placeholder="Please provide details regarding your inquiry..." style="width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none;"></textarea>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <input type="checkbox" id="cf-consent" required style="width: 18px; height: 18px; accent-color: var(--accent-gold);">
+              <label for="cf-consent" style="font-size: 0.85rem; color: var(--text-secondary);">
+                I agree to the processing of my details according to FoldBeat's <a href="#trust" style="color: var(--accent-gold); text-decoration: underline;">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-pantheone btn-dark" style="width: 100%; padding: 16px;">
+              Send Message To Concierge (concierge@foldbeat.com)
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. Corporate B2B Banner -->
     <section style="padding: 80px 0; background: linear-gradient(135deg, #FAF8F2 0%, #FFFFFF 100%); border-top: 1px solid #EFE4CC;">
       <div class="container container-narrow" style="text-align: center;">
         <span class="editorial-sub" style="color: #B45309;">B2B Partnerships</span>
@@ -468,15 +680,12 @@
         <p style="font-size: 1.1rem; color: #5C5242; margin-bottom: 24px;">
           Looking to curate custom acoustic setups for executive client gifting, luxury hospitality, or architectural design projects? Connect directly with our B2B curation desk at <a href="mailto:corporate@foldbeat.com" style="color: #B45309; font-weight: 600;">corporate@foldbeat.com</a>.
         </p>
-        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 30px;">
-          For media coverage, high-res PR imagery, and editorial loans, contact <a href="mailto:press@foldbeat.com" style="color: var(--text-primary); font-weight: 600;">press@foldbeat.com</a>.
-        </p>
         <a href="mailto:corporate@foldbeat.com?subject=Corporate%20Gifting%20Inquiry" class="btn-pantheone btn-gold">Inquire For Corporate Rates</a>
       </div>
     </section>
 
-    <!-- 12. Trust & Legal Information -->
-    <section id="trust" class="container">
+    <!-- 11. Trust & Legal Information -->
+    <section id="trust" class="container" style="padding-bottom: 60px;">
       <div class="trust-legal-box">
         <div>
           <h4 style="margin-bottom: 8px;">Registered Entity</h4>
@@ -561,14 +770,14 @@
             <li><a href="story.html">The Philosophy</a></li>
             <li><a href="story.html">Hinge Engineering</a></li>
             <li><a href="contact.html#shipping">Sustainability & Packaging</a></li>
-            <li><a href="contact.html#contact">Press Inquiries</a></li>
+            <li><a href="contact.html#contact-end">Press Inquiries</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-col-title">Support & Care</h4>
           <ul class="footer-menu-list">
-            <li><a href="contact.html#contact">Customer Concierge</a></li>
+            <li><a href="contact.html#contact-end">Customer Concierge</a></li>
             <li><a href="contact.html#warranty">Warranty & Claims</a></li>
             <li><a href="contact.html#returns">Shipping & 7-Day Returns</a></li>
             <li><a href="contact.html#care">Quick Start & Care Guide</a></li>
