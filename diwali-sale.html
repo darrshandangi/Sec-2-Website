@@ -3,17 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diwali Festive Sale | FoldBeat Audio</title>
+  <title>Diwali Festive Sale 2026 🪔 | FoldBeat Sculptural Audio</title>
   
-  <meta name="description" content="Celebrate Diwali with FoldBeat. Flat 60% Off on curated festive audio gift bundles. Complimentary gold gift packaging and guaranteed express delivery.">
+  <meta name="description" content="Diwali Festive Sale 2026: Flat 60% Off + Extra ₹100 with code DIWALI2026. Gold-finished, gift-ready, guaranteed delivery before Diwali.">
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Scoped Diwali Festive 2026 Styles */
+    :root {
+      --festive-gold: #D97706;
+      --festive-gold-dark: #B45309;
+      --festive-bg: #FAF6ED;
+      --festive-marigold: #EA580C;
+    }
+
+    /* 1. Sticky Announcement Bar + Countdown */
+    .diwali-sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      background: linear-gradient(90deg, #1A1207 0%, #2A1C08 50%, #1A1207 100%);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #785215;
+    }
+    .diwali-countdown-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      color: #FCD34D;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      border: 1px solid rgba(252, 211, 77, 0.3);
+    }
+
+    /* 2. Diwali Hero Polish */
+    .diwali-hero-v2 {
+      padding: 60px 0 70px;
+      background: linear-gradient(180deg, #FFFDF9 0%, #FAF6ED 100%);
+      text-align: center;
+    }
+    .diwali-chips-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .diwali-chip {
+      background: #FFFFFF;
+      border: 1px solid #EFE4CC;
+      border-radius: 9999px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      color: #5C5242;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    /* 3. Interactive Coupon Card */
+    .coupon-showcase-box {
+      max-width: 580px;
+      margin: 40px auto 0;
+      background: #FFFFFF;
+      border: 2px dashed #D97706;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(217, 119, 6, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .copy-btn {
+      background: #D97706;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .copy-btn:hover {
+      background: #B45309;
+      transform: translateY(-2px);
+    }
+
+    /* 4. Gift Finder Widget */
+    .gift-finder-section {
+      background: #FFFFFF;
+      border: 1px solid #EFE4CC;
+      border-radius: 18px;
+      padding: 44px 36px;
+      max-width: 900px;
+      margin: 60px auto;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+    .gift-finder-controls {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+      text-align: left;
+    }
+    .finder-select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      background: #FAF9F6;
+      outline: none;
+    }
+    .finder-select:focus {
+      border-color: #D97706;
+    }
+    .finder-recommendation-card {
+      background: #FAF8F2;
+      border: 1px solid #EAE0C8;
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    /* 5. Diwali Finish & Posture Gallery */
+    .posture-toggle-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .posture-btn {
+      padding: 8px 18px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-light);
+      background: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .posture-btn.active {
+      background: #111822;
+      color: #FFFFFF;
+      border-color: #111822;
+    }
+
+    /* 6. Bundle Comparison Table */
+    .bundle-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      background: #FFFFFF;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid #EFE4CC;
+    }
+    .bundle-table th, .bundle-table td {
+      padding: 16px 20px;
+      text-align: center;
+      border-bottom: 1px solid #EFE4CC;
+      font-size: 0.92rem;
+    }
+    .bundle-table th:first-child, .bundle-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+    .bundle-table th.highlight, .bundle-table td.highlight {
+      background: #FAF6ED;
+      font-weight: 700;
+      color: #111822;
+    }
+
+    /* 7. What's in the Box Tabs */
+    .box-tabs-header {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .box-tab-btn {
+      padding: 10px 22px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-light);
+      background: #FFFFFF;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .box-tab-btn.active {
+      background: #D97706;
+      color: #FFFFFF;
+      border-color: #D97706;
+    }
+    .box-tab-content {
+      background: #FFFFFF;
+      border: 1px solid #EFE4CC;
+      border-radius: 16px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .box-tab-content img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* 8. Delivery Cutoff Checker */
+    .cutoff-box {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #FAF8F2;
+      border: 1px solid #EFE4CC;
+      border-radius: 14px;
+      padding: 30px 24px;
+      text-align: center;
+    }
+    .cutoff-form {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .cutoff-input {
+      padding: 12px 18px;
+      border: 1px solid var(--border-light);
+      border-radius: 9999px;
+      font-size: 0.92rem;
+      outline: none;
+      width: 220px;
+    }
+
+    /* 9. Stock Bar */
+    .stock-meter-wrap {
+      max-width: 500px;
+      margin: 20px auto 0;
+      text-align: left;
+    }
+    .stock-meter-bar {
+      height: 10px;
+      background: #E5E7EB;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .stock-meter-fill {
+      width: 78%;
+      height: 100%;
+      background: linear-gradient(90deg, #D97706 0%, #EA580C 100%);
+      border-radius: 9999px;
+    }
+
+    /* Live Toast */
+    .live-order-toast {
+      position: fixed;
+      bottom: 85px;
+      left: 24px;
+      z-index: 999;
+      background: #111822;
+      color: #FFFFFF;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      border-left: 3px solid #D97706;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* 13. Sticky Mobile Buy Bar */
+    .mobile-sticky-buy-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border-light);
+      padding: 12px 20px;
+      z-index: 1000;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 768px) {
+      .gift-finder-controls {
+        grid-template-columns: 1fr;
+      }
+      .box-tab-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+      .mobile-sticky-buy-bar {
+        display: flex;
+      }
+      .live-order-toast {
+        bottom: 75px;
+        left: 12px;
+        right: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Festive Promo Strip -->
-  <div class="pantheone-promo-strip" style="background: #1C150A; border-bottom: 1px solid #785215;">
-    <span style="color: #FCD34D;">🪔 DIWALI FESTIVE DROP: FLAT 60% OFF + EXTRA ₹100 OFF WITH CODE "DIWALI2025"</span>
-    <a href="#claim" style="color: #FCD34D;">Claim Festive Bundle →</a>
+  <!-- 1. Sticky Announcement Bar + Countdown Timer -->
+  <div class="diwali-sticky-bar">
+    <span>🪔 Flat 60% Off + Extra ₹100 with code <strong>DIWALI2026</strong></span>
+    <div class="diwali-countdown-timer">
+      <span>Sale Ends in:</span>
+      <span id="diwali-timer">05d : 14h : 32m : 18s</span>
+    </div>
   </div>
 
   <!-- Minimalist Header -->
@@ -33,95 +366,486 @@
       </nav>
 
       <div class="header-actions">
-        <a href="#claim" class="btn-pantheone btn-gold btn-sm">Diwali Offer</a>
+        <a href="#claim" class="btn-pantheone btn-gold btn-sm">Claim ₹1,199</a>
       </div>
     </div>
   </header>
 
   <main>
 
-    <!-- Diwali Festive Hero -->
-    <section class="diwali-hero">
+    <!-- 2. Hero Section -->
+    <section class="diwali-hero-v2">
       <div class="container">
-        <div class="diwali-motif">🪔 ✨ 🪔</div>
-        <span class="editorial-sub" style="color: #B45309;">Diwali 2025 Exclusive Edition</span>
-        <h1 class="diwali-title">The Sound of Celebration.</h1>
-        <p class="diwali-sub">
-          Celebrate the festival of lights with the gift of pure, room-filling sound. Designed in warm gold and deep navy to complement your home celebrations.
+        <div style="font-size: 1.8rem; margin-bottom: 12px;">🪔 ✨ 🪔</div>
+        <span class="editorial-sub" style="color: #B45309;">Diwali 2026 Exclusive Edition</span>
+        <h1 style="font-size: clamp(2.6rem, 5vw, 4.4rem); margin-bottom: 14px; color: #111822;">
+          The Sound of Celebration.
+        </h1>
+        <p style="font-size: 1.2rem; color: #5C5242; max-width: 680px; margin: 0 auto 24px; font-weight: 300;">
+          Gold-finished. Gift-ready. Delivered before Diwali.
         </p>
 
-        <div class="diwali-coupon-pill">
-          <span>Apply Festive Code:</span>
-          <code>DIWALI2025</code>
-          <span style="color: var(--accent-gold); font-size: 0.78rem;">(Extra ₹100 Off + Free Gift Box)</span>
+        <!-- Pricing Badge -->
+        <div style="display: flex; justify-content: center; align-items: baseline; gap: 14px; margin-bottom: 24px;">
+          <span style="font-size: 1.35rem; color: #9CA3AF; text-decoration: line-through;">₹2,999</span>
+          <span style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; color: #111822;">₹1,199</span>
+          <span style="background: #D97706; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">60% OFF</span>
         </div>
 
-        <!-- Festive Hero Photo -->
-        <div class="hero-photo-frame" style="max-width: 980px;">
-          <img src="images/foldbeat-diwali-diyas.jpg" alt="FoldBeat Diwali Gift Edition surrounded by brass diyas and marigold flowers">
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#claim" class="btn-pantheone btn-gold">Claim Festive Bundle</a>
+          <a href="#gift-finder" class="btn-pantheone btn-outline">Find My Gift ↓</a>
+        </div>
+
+        <!-- Trust Chips -->
+        <div class="diwali-chips-row">
+          <div class="diwali-chip">🎁 Free Gold Gift Box</div>
+          <div class="diwali-chip">🛡️ 1-Year Doorstep Warranty</div>
+          <div class="diwali-chip">📦 7-Day Hassle-Free Returns</div>
+        </div>
+
+        <!-- Stock Meter -->
+        <div class="stock-meter-wrap">
+          <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600; color: #785215;">
+            <span>Festive Stock Status</span>
+            <span>78% Claimed</span>
+          </div>
+          <div class="stock-meter-bar">
+            <div class="stock-meter-fill"></div>
+          </div>
+        </div>
+
+        <!-- Festive Diya Hero Photo -->
+        <div class="hero-photo-frame" style="max-width: 980px; margin: 40px auto 0;">
+          <img src="images/foldbeat-diwali-diyas.jpg" alt="FoldBeat speaker with brass diyas and marigold flowers for Diwali 2026">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Coupon Card with One-Tap Copy -->
+    <section class="container" style="padding-top: 10px;">
+      <div class="coupon-showcase-box">
+        <div style="text-align: left;">
+          <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #B45309; font-weight: 700;">Festive Promo Coupon</span>
+          <div style="font-family: var(--font-sans); font-size: 1.6rem; font-weight: 800; color: #111822; letter-spacing: 0.08em; margin: 4px 0;">
+            DIWALI2026
+          </div>
+          <div style="font-size: 0.9rem; color: #5C5242;">
+            Effective Price: ₹1,199 − ₹100 = <strong style="color: #111822; font-size: 1.15rem;">₹1,099</strong>
+          </div>
+        </div>
+
+        <button type="button" class="copy-btn" id="copy-coupon-btn" onclick="copyCouponCode()">
+          Copy Code
+        </button>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Gift Finder Widget -->
+    <section id="gift-finder" class="container">
+      <div class="gift-finder-section">
+        <span class="editorial-sub" style="color: #B45309;">Personalized Recommendation</span>
+        <h2 style="margin-bottom: 10px;">Diwali Gift Finder</h2>
+        <p style="color: var(--text-secondary); max-width: 580px; margin: 0 auto; font-size: 0.95rem;">
+          Select your recipient and style to find the ideal celebratory sound bundle.
+        </p>
+
+        <div class="gift-finder-controls">
+          <div>
+            <label style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; display: block; margin-bottom: 6px;">Who's it for?</label>
+            <select id="finder-recipient" class="finder-select" onchange="updateGiftRecommendation()">
+              <option value="Parents">Parents & Elders</option>
+              <option value="Partner" selected>Partner / Spouse</option>
+              <option value="Friend">Close Friend</option>
+              <option value="Colleague">Colleague / Team</option>
+              <option value="Myself">Myself</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; display: block; margin-bottom: 6px;">Budget Range</label>
+            <select id="finder-budget" class="finder-select" onchange="updateGiftRecommendation()">
+              <option value="under1500" selected>Under ₹1,500 (Single Pack)</option>
+              <option value="1500-3000">₹1,500 – ₹3,000 (Duo Bundle)</option>
+              <option value="3000+">₹3,000+ (Family 3-Pack)</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.78rem; font-weight: 600; text-transform: uppercase; display: block; margin-bottom: 6px;">Aesthetic Style</label>
+            <select id="finder-style" class="finder-select" onchange="updateGiftRecommendation()">
+              <option value="Classic" selected>Executive Classic (Navy & Gold)</option>
+              <option value="Bold">Bold Avant-Garde (Plum / Green)</option>
+              <option value="Minimal">Modern Minimalist (Champagne / Black)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Output Recommendation Card -->
+        <div class="finder-recommendation-card" id="finder-result-box">
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: #B45309; text-transform: uppercase;" id="rec-tag">Recommended for You</div>
+            <h3 style="font-size: 1.35rem; color: #111822; margin: 4px 0;" id="rec-title">FoldBeat Pro — Executive Navy & Gold Solo Pack</h3>
+            <p style="font-size: 0.9rem; color: #5C5242; margin: 0;" id="rec-desc">A timeless architectural centerpiece featuring gold hinges and warm celebratory acoustics.</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: #111822;" id="rec-price">₹1,099 <span style="font-size: 0.85rem; font-weight: 400; color: #785215;">(with DIWALI2026)</span></div>
+            <a href="#claim" class="btn-pantheone btn-gold btn-sm" style="margin-top: 6px;">Add to Cart →</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Diwali Gift Box Showcase -->
-    <section class="split-feature-section" id="claim" style="padding: 90px 0; background: #FFFFFF;">
-      <div class="container">
-        <div class="split-feature-grid">
-          
-          <div class="split-image-wrap">
-            <img src="images/speaker-navy-gold.jpg" alt="FoldBeat Navy & Gold Festive Speaker">
+    <!-- 5. Colour Picker + Gallery + 3 Postures -->
+    <section class="container" style="padding-bottom: 60px;">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 30px;">
+        <span class="editorial-sub">Curated Finishes</span>
+        <h2>Choose Your Festive Finish</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          The 60% celebratory discount applies equally across all five architectural editions.
+        </p>
+
+        <!-- Finish Swatches -->
+        <div class="finish-swatches-row" style="justify-content: center; margin-top: 18px;">
+          <button type="button" class="finish-dot f-navy active" data-diwali-finish="navy-gold" data-name="Executive Classic (Navy & Gold)" title="Navy & Gold"></button>
+          <button type="button" class="finish-dot f-black" data-diwali-finish="matte-black" data-name="Stealth Edition (Matte Black)" title="Matte Black"></button>
+          <button type="button" class="finish-dot f-green" data-diwali-finish="forest-green" data-name="Earth Luxury (Forest Green)" title="Forest Green"></button>
+          <button type="button" class="finish-dot f-champagne" data-diwali-finish="champagne-silver" data-name="Modern Minimalist (Champagne Silver)" title="Champagne Silver"></button>
+          <button type="button" class="finish-dot f-plum" data-diwali-finish="plum-silver" data-name="Bold Avant-Garde (Plum Velvet)" title="Plum Velvet"></button>
+        </div>
+
+        <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-top: 10px;">
+          Selected: <span id="diwali-selected-name" style="color: #B45309;">Executive Classic (Navy & Gold)</span>
+        </div>
+      </div>
+
+      <!-- Gallery Stage + Posture Switcher -->
+      <div style="max-width: 780px; margin: 0 auto; text-align: center;">
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid #EFE4CC; background: #FAF8F2; box-shadow: var(--shadow-subtle);">
+          <img id="diwali-main-img" src="images/foldbeat-speaker-hero.jpg" alt="FoldBeat Speaker in Navy and Gold" style="width: 100%; height: 420px; object-fit: contain; display: block; padding: 20px;">
+        </div>
+
+        <!-- 3-Mode Posture Toggle -->
+        <div class="posture-toggle-row">
+          <button type="button" class="posture-btn active" onclick="setPosture('book')">📖 Book Stand Mode (60°)</button>
+          <button type="button" class="posture-btn" onclick="setPosture('flat')">🌐 Panoramic Flat (180°)</button>
+          <button type="button" class="posture-btn" onclick="setPosture('pocket')">👝 Pocket Clamshell (0°)</button>
+        </div>
+        <p id="posture-caption" style="font-size: 0.88rem; color: var(--text-muted);">
+          Book Stand Mode: Props upright at an optimal angle for bedside listening and desktop work.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. Bundle Comparison Table -->
+    <section id="claim" class="container" style="padding-bottom: 70px;">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="editorial-sub" style="color: #B45309;">Gifting Bundles</span>
+        <h2>Curated Diwali Packs</h2>
+      </div>
+
+      <table class="bundle-table">
+        <thead>
+          <tr>
+            <th>Bundle Details</th>
+            <th>Solo Pack</th>
+            <th class="highlight">Duo (Best Value) 🌟</th>
+            <th>Family 3-Pack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Number of Speakers</td>
+            <td>1 Unit</td>
+            <td class="highlight">2 Units (TWS Stereo Sync)</td>
+            <td>3 Units</td>
+          </tr>
+          <tr>
+            <td>Festive Price</td>
+            <td style="font-weight: 700; color: #111822;">₹1,199</td>
+            <td class="highlight" style="font-size: 1.25rem; color: #B45309;">₹2,399</td>
+            <td style="font-weight: 700; color: #111822;">₹3,599</td>
+          </tr>
+          <tr>
+            <td>With DIWALI2026 Code</td>
+            <td>₹1,099</td>
+            <td class="highlight">₹2,299</td>
+            <td>₹3,499</td>
+          </tr>
+          <tr>
+            <td>Gold Gift Box & Card</td>
+            <td>✓ Included</td>
+            <td class="highlight">✓ 2 Included</td>
+            <td>✓ 3 Included</td>
+          </tr>
+          <tr>
+            <td>Velvet Carry Pouches</td>
+            <td>✓ Included</td>
+            <td class="highlight">✓ 2 Included</td>
+            <td>✓ 3 Included</td>
+          </tr>
+          <tr>
+            <td>Express Courier Air</td>
+            <td>✓ Free</td>
+            <td class="highlight">✓ Free Priority Air</td>
+            <td>✓ Free Priority Air</td>
+          </tr>
+          <tr>
+            <td>Action</td>
+            <td>
+              <button class="btn-pantheone btn-outline btn-sm" onclick="alert('Solo Pack added at ₹1,199 (Use DIWALI2026 for ₹1,099)!');">Select Solo</button>
+            </td>
+            <td class="highlight">
+              <button class="btn-pantheone btn-gold btn-sm" onclick="alert('Duo Pack added at ₹2,399! Complimentary gift boxes included.');">Claim Duo Pack</button>
+            </td>
+            <td>
+              <button class="btn-pantheone btn-outline btn-sm" onclick="alert('Family 3-Pack added at ₹3,599!');">Select Family Pack</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 7. What's in the Box (Tabs) -->
+    <section class="container" style="padding-bottom: 70px;">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 28px;">
+        <span class="editorial-sub">Unboxing Experience</span>
+        <h2>What's Inside the Festive Box</h2>
+      </div>
+
+      <div class="box-tabs-header">
+        <button class="box-tab-btn active" onclick="switchBoxTab('speaker')">The Speaker</button>
+        <button class="box-tab-btn" onclick="switchBoxTab('packaging')">Gold Packaging</button>
+        <button class="box-tab-btn" onclick="switchBoxTab('accessories')">Accessories</button>
+        <button class="box-tab-btn" onclick="switchBoxTab('card')">Greeting Card</button>
+      </div>
+
+      <div class="box-tab-content" id="box-tab-content">
+        <div>
+          <h3 id="tab-title" style="font-size: 1.6rem; margin-bottom: 10px;">FoldBeat Dual-Panel Speaker</h3>
+          <p id="tab-desc" style="font-size: 0.95rem; color: #5C5242; line-height: 1.7; margin-bottom: 20px;">
+            Hand-assembled with satin chassis and gold dual-axis hinge, tuned with twin 45mm neodymium drivers for room-filling acoustic brilliance.
+          </p>
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 6px;">Personalize a Gift Message:</label>
+            <input type="text" id="gift-card-msg" placeholder="e.g. Wishing you a bright and joyful Diwali! — From Rahul" style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 8px; font-family: inherit; font-size: 0.9rem; outline: none;">
           </div>
+        </div>
+        <div>
+          <img id="tab-img" src="images/foldbeat-marble-sunlight.jpg" alt="FoldBeat inside box">
+        </div>
+      </div>
+    </section>
 
-          <div class="split-content">
-            <span class="editorial-sub" style="color: #B45309;">Festive Gifting Bundle</span>
-            <h2>FoldBeat Diwali Gold Edition</h2>
-            <p>
-              Hand-finished with an anodized gold dual hinge that catches the ambient warmth of festive diyas and evening lights. The perfect celebratory gift for music lovers, family, and yourself.
-            </p>
+    <!-- 8. Delivery Cutoff Checker -->
+    <section class="container" style="padding-bottom: 70px;">
+      <div class="cutoff-box">
+        <div style="font-size: 1.6rem; color: #D97706; margin-bottom: 6px;">🚚 📍</div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 6px;">Guaranteed Pre-Diwali Delivery Checker</h3>
+        <p style="font-size: 0.92rem; color: #5C5242;">Enter your PIN code to see exact dispatch cutoff dates for Diwali 2026.</p>
 
-            <div style="background: #FAF8F2; border: 1px solid #EFE4CC; padding: 20px; border-radius: 12px; margin-bottom: 24px;">
-              <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
-                <span style="font-family: var(--font-serif); font-size: 2.4rem; color: #111822; font-weight: 700;">₹1,199</span>
-                <span style="font-size: 1.15rem; color: #9CA3AF; text-decoration: line-through;">₹2,999</span>
-                <span style="background: #D97706; color: #FFF; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px;">60% OFF</span>
-              </div>
-              <p style="font-size: 0.85rem; color: #785215;">
-                Includes Complimentary Gold Embossed Gift Packaging & Personalized Message Card.
-              </p>
+        <form class="cutoff-form" onsubmit="event.preventDefault(); checkDeliveryCutoff();">
+          <input type="text" id="cutoff-pincode" class="cutoff-input" placeholder="Enter 6-digit PIN code" maxlength="6" required>
+          <button type="submit" class="btn-pantheone btn-dark btn-sm">Check Cutoff →</button>
+        </form>
+
+        <div id="cutoff-result" style="margin-top: 16px; font-weight: 600; font-size: 0.95rem; color: #166534; display: none;"></div>
+      </div>
+    </section>
+
+    <!-- 10. Corporate & Bulk Gifting Form -->
+    <section class="container" style="padding-bottom: 80px;">
+      <div style="background: linear-gradient(135deg, #FAF8F2 0%, #FFFFFF 100%); border: 1px solid #EFE4CC; border-radius: 18px; padding: 48px 36px; box-shadow: var(--shadow-subtle);">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+          <span class="editorial-sub" style="color: #B45309;">Executive B2B Inquiries</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Corporate Diwali Gifting</h2>
+          <p style="font-size: 0.95rem; color: #5C5242;">
+            Curate bespoke sound setups for executive team rewards and client appreciation. Custom laser logo engraving available on orders of 25+ units.
+          </p>
+        </div>
+
+        <form style="max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px;" onsubmit="event.preventDefault(); alert('✨ Corporate quote request received!\nOur B2B gifting concierge will send full pricing catalog to your email within 2 hours.'); this.reset();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 6px;">Company Name *</label>
+              <input type="text" required placeholder="e.g. Acme Innovations Pvt Ltd" style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
             </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 6px;">Quantity Needed *</label>
+              <select required style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem; background: #FFF;">
+                <option value="10-25">10 – 25 Units</option>
+                <option value="26-50" selected>26 – 50 Units (Logo Engraving Included)</option>
+                <option value="51-100">51 – 100 Units</option>
+                <option value="100+">100+ Bulk Enterprise</option>
+              </select>
+            </div>
+          </div>
 
-            <button type="button" class="btn-pantheone btn-gold btn-lg" onclick="alert('Diwali Festive Order Confirmed! ₹1,199 applied with code DIWALI2025. Dispatched with Free Express Delivery.');" style="width: 100%;">
-              Claim Diwali Festive Bundle — ₹1,199
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 6px;">Custom Logo Engraving?</label>
+              <select style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem; background: #FFF;">
+                <option value="Yes">Yes, Custom Logo on Chassis</option>
+                <option value="No">No, Standard FoldBeat Branding</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 6px;">Required Delivery Date</label>
+              <input type="date" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
+            </div>
+          </div>
+
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 6px;">Official Email / Phone *</label>
+            <input type="text" required placeholder="corporate@company.com or +91 98765 43210" style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
+          </div>
+
+          <button type="submit" class="btn-pantheone btn-gold" style="width: 100%; padding: 14px;">
+            Request Bulk Quote & Digital Catalog →
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 11. Social Proof Testimonials -->
+    <section class="container" style="padding-bottom: 80px;">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 36px;">
+        <span class="editorial-sub">Verified Experiences</span>
+        <h2>What Diwali Gifting Customers Say</h2>
+      </div>
+
+      <div class="shop-reviews-grid">
+        <div class="shop-review-card">
+          <div style="color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 6px;">★★★★★</div>
+          <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px;">
+            “Ordered 4 Duo packs for my siblings and parents. The gold gift box with the velvet pouch made it the most appreciated Diwali gift we've ever shared.”
+          </p>
+          <div style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">Ananya Deshmukh</div>
+          <div style="font-size: 0.75rem; color: #166534; font-weight: 700;">✓ Verified Diwali Buyer — Mumbai</div>
+        </div>
+
+        <div class="shop-review-card">
+          <div style="color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 6px;">★★★★★</div>
+          <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px;">
+            “The DIWALI2026 coupon brought it down to ₹1,099. For this sound quality and real metal hinge, it’s unbeatable value.”
+          </p>
+          <div style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">Kunal Singhania</div>
+          <div style="font-size: 0.75rem; color: #166534; font-weight: 700;">✓ Verified Diwali Buyer — Jaipur</div>
+        </div>
+
+        <div class="shop-review-card">
+          <div style="color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 6px;">★★★★★</div>
+          <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px;">
+            “Arrived in 2 days right before Diwali evening pujas. Propped it up beside the diyas—warm, crisp, and beautifully aesthetic.”
+          </p>
+          <div style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">Priya Mehra</div>
+          <div style="font-size: 0.75rem; color: #166534; font-weight: 700;">✓ Verified Diwali Buyer — Ahmedabad</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. FAQ Accordion -->
+    <section class="faq-section" style="background: var(--bg-stone); padding: 80px 0;">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <span class="editorial-sub">Diwali Questions</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-wrap" style="max-width: 800px; margin: 30px auto 0;">
+          <div class="faq-item open">
+            <button class="faq-question">
+              <span>What is included with the Diwali Gift Edition?</span>
+              <span class="faq-icon">+</span>
             </button>
+            <div class="faq-answer">
+              Every Diwali Gift Edition includes the FoldBeat Pro speaker, a bespoke gold foil presentation box, a complimentary velvet drawstring pouch, a braided USB-C cable, and a personalized festive greeting card.
+            </div>
           </div>
 
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Will my order arrive guaranteed before Diwali?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. All metro city orders placed before our cutoff date are dispatched via Bluedart Express Air to guarantee delivery prior to Diwali celebrations.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I add custom names or messages on the greeting card?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, simply enter your message in the "Personalize your message" box above or message our WhatsApp concierge right after placing your order.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your festive returns and warranty policy?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Gift with confidence. We offer an extended 7-day hassle-free return window and our comprehensive 1-year doorstep pickup and replacement warranty.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do bulk corporate orders work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              For corporate orders of 25+ units, we offer wholesale tier pricing and complimentary laser logo engraving with direct multi-address doorstep shipping.
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- 3 Festive Gifting Pillars -->
-        <div class="festive-gift-grid">
-          <div class="festive-gift-card">
-            <div class="festive-icon">🎁</div>
-            <h3>Bespoke Gift Packaging</h3>
-            <p>Each Diwali order arrives in an exquisite gold-foiled presentation box, ready to gift right out of the courier box.</p>
-          </div>
+    <!-- 13. Final CTA -->
+    <section style="background: linear-gradient(180deg, #1A1207 0%, #111822 100%); color: #FFFFFF; padding: 90px 0; text-align: center;">
+      <div class="container container-narrow">
+        <span class="editorial-sub" style="color: #FCD34D;">Limited Festive Drop</span>
+        <h2 style="color: #FFFFFF; font-size: clamp(2.4rem, 4.5vw, 3.6rem); margin-bottom: 14px;">
+          Light up their Diwali.
+        </h2>
+        <p style="color: #D1D5DB; font-size: 1.15rem; max-width: 580px; margin: 0 auto 32px;">
+          Celebrate the festival of lights with pure acoustic warmth. Hand-finished gold hinge, dual resonance chambers, and bespoke gift packaging.
+        </p>
 
-          <div class="festive-gift-card">
-            <div class="festive-icon">🚚</div>
-            <h3>Guaranteed Delivery</h3>
-            <p>Dispatched with priority express air courier to guarantee arrival at your doorstep in time for Diwali festivities.</p>
-          </div>
-
-          <div class="festive-gift-card">
-            <div class="festive-icon">🛡️</div>
-            <h3>1-Year Peace of Mind</h3>
-            <p>Backed by our signature 1-year doorstep replacement warranty so your gift brings joy for years to come.</p>
-          </div>
-        </div>
-
+        <a href="#claim" class="btn-pantheone btn-gold btn-lg" style="font-size: 0.95rem; padding: 16px 36px;">
+          Claim for ₹1,199 (Use DIWALI2026 for ₹1,099) →
+        </a>
       </div>
     </section>
 
   </main>
+
+  <!-- Live Order Toast Notification -->
+  <div class="live-order-toast" id="live-toast">
+    <span style="font-size: 1.2rem;">✨</span>
+    <div>
+      <div style="font-weight: 700; color: #FCD34D;" id="toast-title">Riya from Pune</div>
+      <div style="font-size: 0.75rem; color: #D1D5DB;" id="toast-desc">Just ordered a Duo Festive Pack (2 mins ago)</div>
+    </div>
+  </div>
+
+  <!-- Sticky Mobile Buy Bar -->
+  <div class="mobile-sticky-buy-bar">
+    <div>
+      <div style="font-size: 0.72rem; color: #785215; font-weight: 700;">DIWALI OFFER</div>
+      <div style="font-size: 1.15rem; font-weight: 800; color: #111822;">₹1,099 <span style="font-size: 0.75rem; color: #9CA3AF; text-decoration: line-through;">₹2,999</span></div>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <a href="https://wa.me/919030000000?text=Hi%20FoldBeat,%20I%20want%20to%20order%20Diwali%20gift%20pack" target="_blank" rel="noopener" style="background: #25D366; color: #FFF; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; text-decoration: none;">💬</a>
+      <a href="#claim" class="btn-pantheone btn-gold btn-sm">Claim Now</a>
+    </div>
+  </div>
 
   <!-- Minimalist Footer -->
   <footer class="pantheone-footer">
@@ -156,7 +880,7 @@
           <h4 class="footer-col-title">Collection</h4>
           <ul class="footer-menu-list">
             <li><a href="shop.html">SHOP (25BC166)</a></li>
-            <li><a href="diwali-sale.html">Diwali Festive Sale 🪔</a></li>
+            <li><a href="diwali-sale.html">Diwali Festive Sale 2026 🪔</a></li>
             <li><a href="shop.html">Navy & Gold Classic</a></li>
             <li><a href="shop.html">Stealth Matte Black</a></li>
           </ul>
@@ -168,14 +892,14 @@
             <li><a href="story.html">The Philosophy</a></li>
             <li><a href="story.html">Hinge Engineering</a></li>
             <li><a href="contact.html#shipping">Sustainability & Packaging</a></li>
-            <li><a href="contact.html#contact">Press Inquiries</a></li>
+            <li><a href="contact.html#contact-end">Press Inquiries</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-col-title">Contact us (25BC148)</h4>
           <ul class="footer-menu-list">
-            <li><a href="contact.html#contact">Customer Concierge</a></li>
+            <li><a href="contact.html#contact-end">Customer Concierge</a></li>
             <li><a href="contact.html#warranty">Warranty & Claims</a></li>
             <li><a href="contact.html#returns">Shipping & 7-Day Returns</a></li>
             <li><a href="contact.html#care">Quick Start & Care Guide</a></li>
@@ -202,12 +926,238 @@
       </div>
 
       <div class="footer-bottom-bar">
-        <p>&copy; 2025 FoldBeat Audio Private Limited. All rights reserved. | <a href="contact.html#trust">Privacy Policy</a> | <a href="contact.html#trust">Terms</a> | <a href="contact.html#returns">Refunds</a></p>
+        <p>&copy; 2026 FoldBeat Audio Private Limited. Happy Diwali from FoldBeat. All rights reserved.</p>
         <p>Part sculpture. All sound.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts for Diwali Page Functionality -->
+  <script>
+    // 1. Live Countdown Timer (Targeting Diwali 2026, Nov 8, 2026)
+    const targetDate = new Date("November 8, 2026 23:59:59").getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("diwali-timer").innerText = "FESTIVE SALE LIVE";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("diwali-timer").innerText = 
+        `${String(days).padStart(2, '0')}d : ${String(hours).padStart(2, '0')}h : ${String(minutes).padStart(2, '0')}m : ${String(seconds).padStart(2, '0')}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 2. One-Tap Copy Coupon
+    function copyCouponCode() {
+      navigator.clipboard.writeText("DIWALI2026").then(() => {
+        const btn = document.getElementById("copy-coupon-btn");
+        btn.innerText = "Copied ✓";
+        btn.style.background = "#166534";
+        setTimeout(() => {
+          btn.innerText = "Copy Code";
+          btn.style.background = "#D97706";
+        }, 2500);
+      });
+    }
+
+    // 3. Gift Finder Dropdowns
+    const giftRecommendations = {
+      "Parents": {
+        title: "FoldBeat Pro — Executive Navy & Gold Solo Pack",
+        desc: "Warm acoustic presence and legible tactile buttons. Easy to use without apps.",
+        price: "₹1,099"
+      },
+      "Partner": {
+        title: "FoldBeat Duo — Shared Stereo Celebration Pack",
+        desc: "Two synchronized speakers in matching velvet gift boxes for your home.",
+        price: "₹2,299"
+      },
+      "Friend": {
+        title: "FoldBeat Pro — Earth Luxury Forest Green",
+        desc: "A bold, modern statement piece with gold-accented hinge and all-weekend battery.",
+        price: "₹1,099"
+      },
+      "Colleague": {
+        title: "FoldBeat Pro — Modern Minimalist Champagne",
+        desc: "Understated architectural luxury suitable for study desks and conference audio.",
+        price: "₹1,099"
+      },
+      "Myself": {
+        title: "FoldBeat Duo — TWS True Wireless Stereo Pack",
+        desc: "Immersive dual-channel sound separation with room-filling panoramic sound.",
+        price: "₹2,299"
+      }
+    };
+
+    function updateGiftRecommendation() {
+      const recipient = document.getElementById("finder-recipient").value;
+      const budget = document.getElementById("finder-budget").value;
+      const data = giftRecommendations[recipient] || giftRecommendations["Partner"];
+
+      document.getElementById("rec-tag").innerText = `Recommended for ${recipient}`;
+      document.getElementById("rec-title").innerText = data.title;
+      document.getElementById("rec-desc").innerText = data.desc;
+
+      if (budget === "3000+") {
+        document.getElementById("rec-title").innerText = "FoldBeat Family 3-Pack Festive Bundle";
+        document.getElementById("rec-desc").innerText = "Complete celebratory audio for living room, dining, and balcony spaces.";
+        document.getElementById("rec-price").innerHTML = '₹3,499 <span style="font-size: 0.85rem; font-weight: 400; color: #785215;">(with DIWALI2026)</span>';
+      } else if (budget === "1500-3000") {
+        document.getElementById("rec-title").innerText = "FoldBeat Duo Stereo Bundle (2 Units)";
+        document.getElementById("rec-price").innerHTML = '₹2,299 <span style="font-size: 0.85rem; font-weight: 400; color: #785215;">(with DIWALI2026)</span>';
+      } else {
+        document.getElementById("rec-price").innerHTML = `${data.price} <span style="font-size: 0.85rem; font-weight: 400; color: #785215;">(with DIWALI2026)</span>`;
+      }
+    }
+
+    // 4. Colour Swatch Picker
+    const diwaliFinishes = {
+      'navy-gold': { name: 'Executive Classic (Navy & Gold)', img: 'images/foldbeat-speaker-hero.jpg' },
+      'matte-black': { name: 'Stealth Edition (Matte Black)', img: 'images/speaker-matte-black.jpg' },
+      'forest-green': { name: 'Earth Luxury (Forest Green)', img: 'images/speaker-forest-green.jpg' },
+      'champagne-silver': { name: 'Modern Minimalist (Champagne Silver)', img: 'images/speaker-champagne-silver.jpg' },
+      'plum-silver': { name: 'Bold Avant-Garde (Plum Velvet)', img: 'images/speaker-plum-silver.jpg' }
+    };
+
+    document.querySelectorAll('[data-diwali-finish]').forEach(dot => {
+      dot.addEventListener('click', () => {
+        const key = dot.getAttribute('data-diwali-finish');
+        const data = diwaliFinishes[key];
+        if (!data) return;
+
+        document.querySelectorAll('[data-diwali-finish]').forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+
+        document.getElementById('diwali-selected-name').innerText = data.name;
+        const mainImg = document.getElementById('diwali-main-img');
+        mainImg.style.opacity = '0.3';
+        setTimeout(() => {
+          mainImg.src = data.img;
+          mainImg.style.opacity = '1';
+        }, 150);
+      });
+    });
+
+    // 5. Posture Modes
+    const postures = {
+      'book': {
+        caption: 'Book Stand Mode (60°): Props upright at an optimal angle for bedside listening and desktop work.',
+        img: 'images/foldbeat-speaker-hero.jpg'
+      },
+      'flat': {
+        caption: 'Panoramic Flat Mode (180°): Unfolds flat across the table to broadcast 360° stereo music to the whole room.',
+        img: 'images/carousel-slide-2.jpg'
+      },
+      'pocket': {
+        caption: 'Pocket Clamshell Mode (0°): Folds closed into a 12cm pocket form with self-shielding acoustic mesh.',
+        img: 'images/carousel-slide-3.jpg'
+      }
+    };
+
+    function setPosture(mode) {
+      document.querySelectorAll('.posture-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      const p = postures[mode];
+      if (p) {
+        document.getElementById('posture-caption').innerText = p.caption;
+        const mainImg = document.getElementById('diwali-main-img');
+        mainImg.style.opacity = '0.3';
+        setTimeout(() => {
+          mainImg.src = p.img;
+          mainImg.style.opacity = '1';
+        }, 150);
+      }
+    }
+
+    // 6. What's in the box tabs
+    const boxTabs = {
+      'speaker': {
+        title: 'FoldBeat Dual-Panel Speaker',
+        desc: 'Hand-assembled with satin composite panels and an aerospace gold friction hinge. Features dual 45mm neodymium acoustic transducers and Helmholtz resonance chambers.',
+        img: 'images/foldbeat-marble-sunlight.jpg'
+      },
+      'packaging': {
+        title: 'Gold-Foil Embossed Gift Box',
+        desc: 'Bespoke rigid presentation packaging featuring traditional gold geometric motifs. Designed to delight without needing additional wrapping paper.',
+        img: 'images/foldbeat-diwali-diyas.jpg'
+      },
+      'accessories': {
+        title: 'Braided Gold Cable & Velvet Pouch',
+        desc: 'Includes a heavy-gauge gold-weave USB-C fast charging cable, a plush velvet drawstring protective travel sleeve, and a numbered certificate of craftsmanship.',
+        img: 'images/foldbeat-macro-detail.jpg'
+      },
+      'card': {
+        title: 'Personalized Greeting Card',
+        desc: 'A heavy matte gold-foil greeting card with your custom festive message printed inside. Perfect for sending warm blessings to family and partners.',
+        img: 'images/carousel-slide-1.jpg'
+      }
+    };
+
+    function switchBoxTab(tabKey) {
+      document.querySelectorAll('.box-tab-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      const data = boxTabs[tabKey];
+      if (data) {
+        document.getElementById('tab-title').innerText = data.title;
+        document.getElementById('tab-desc').innerText = data.desc;
+        document.getElementById('tab-img').src = data.img;
+      }
+    }
+
+    // 7. Delivery Cutoff Checker
+    function checkDeliveryCutoff() {
+      const pin = document.getElementById('cutoff-pincode').value.trim();
+      const res = document.getElementById('cutoff-result');
+      if (pin.length === 6 && !isNaN(pin)) {
+        res.style.display = 'block';
+        res.innerHTML = `✓ PIN Code ${pin} is eligible for Guaranteed Pre-Diwali Express Delivery!<br><span style="font-weight:400; color:#5C5242; font-size:0.85rem;">Order by <strong>Nov 4, 2026, 6:00 PM</strong> to receive by Diwali.</span>`;
+      } else {
+        res.style.display = 'block';
+        res.style.color = '#B91C1C';
+        res.innerText = 'Please enter a valid 6-digit PIN code.';
+      }
+    }
+
+    // 8. Live Order Toasts (Simulated Realistic Feed)
+    const toastData = [
+      { name: "Riya from Pune", action: "Just ordered a Duo Festive Pack (2 mins ago)" },
+      { name: "Aditya from Bengaluru", action: "Claimed Solo Pack in Navy & Gold (4 mins ago)" },
+      { name: "Simran from New Delhi", action: "Ordered Family 3-Pack for Diwali Gifting (7 mins ago)" },
+      { name: "Vikram from Mumbai", action: "Applied coupon DIWALI2026 (1 min ago)" }
+    ];
+    let toastIndex = 0;
+    setInterval(() => {
+      const toast = document.getElementById('live-toast');
+      if (!toast) return;
+      toastIndex = (toastIndex + 1) % toastData.length;
+      document.getElementById('toast-title').innerText = toastData[toastIndex].name;
+      document.getElementById('toast-desc').innerText = toastData[toastIndex].action;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+      }, 4000);
+    }, 9000);
+
+    // 9. FAQ Accordion
+    document.querySelectorAll('.faq-item .faq-question').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>
-
