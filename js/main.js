@@ -222,7 +222,7 @@
   }
 
   /* -------------------------------------------------------------
-     6. LIFESTYLE IMAGE CAROUSEL
+     6. LIFESTYLE IMAGE CAROUSEL (Auto-Moving + Scroll Driven)
   ------------------------------------------------------------- */
   const carouselTrack = $('#carousel-track');
   const prevBtn = $('#carousel-prev-btn');
@@ -234,6 +234,8 @@
     const totalSlides = slides.length;
     let currentSlide = 0;
     let autoSlideTimer = null;
+    let isUserScrolling = false;
+    let scrollTimeout = null;
 
     function goToSlide(index) {
       if (index < 0) {
@@ -260,7 +262,7 @@
 
     function startAutoSlide() {
       stopAutoSlide();
-      autoSlideTimer = setInterval(nextSlide, 3500);
+      autoSlideTimer = setInterval(nextSlide, 3000);
     }
 
     function stopAutoSlide() {
@@ -269,6 +271,41 @@
         autoSlideTimer = null;
       }
     }
+
+    /* Scroll Driven Advance: As user scrolls through the gallery section, slides progress naturally */
+    const gallerySection = $('#lifestyle-gallery');
+    let lastScrollProgress = -1;
+
+    function handleScrollAdvance() {
+      if (!gallerySection) return;
+      const rect = gallerySection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Check if gallery is inside the viewport
+      if (rect.top < windowHeight * 0.8 && rect.bottom > windowHeight * 0.2) {
+        // Calculate progress from 0 (entered) to 1 (leaving)
+        const totalDistance = windowHeight + rect.height;
+        const currentDistance = windowHeight - rect.top;
+        const progress = Math.max(0, Math.min(1, currentDistance / totalDistance));
+        
+        // Map progress to slide index (0 to totalSlides - 1)
+        const targetSlide = Math.min(totalSlides - 1, Math.floor(progress * totalSlides));
+        
+        if (targetSlide !== currentSlide && targetSlide !== lastScrollProgress) {
+          lastScrollProgress = targetSlide;
+          goToSlide(targetSlide);
+        }
+
+        // Briefly pause interval during active user scroll, then resume auto-slide
+        stopAutoSlide();
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          startAutoSlide();
+        }, 1200);
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollAdvance, { passive: true });
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
@@ -314,7 +351,7 @@
       startAutoSlide();
     }, { passive: true });
 
-    // Pause auto slide on hover
+    // Pause auto slide on mouse hover
     const container = $('.carousel-container');
     if (container) {
       container.addEventListener('mouseenter', stopAutoSlide);
