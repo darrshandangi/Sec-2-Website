@@ -221,4 +221,107 @@
     });
   }
 
+  /* -------------------------------------------------------------
+     6. LIFESTYLE IMAGE CAROUSEL
+  ------------------------------------------------------------- */
+  const carouselTrack = $('#carousel-track');
+  const prevBtn = $('#carousel-prev-btn');
+  const nextBtn = $('#carousel-next-btn');
+  const dots = $$('.carousel-dot');
+
+  if (carouselTrack) {
+    const slides = $$('.carousel-slide', carouselTrack);
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let autoSlideTimer = null;
+
+    function goToSlide(index) {
+      if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+
+      carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideTimer = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideTimer) {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = null;
+      }
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const slideIdx = parseInt(dot.dataset.slide, 10);
+        goToSlide(slideIdx);
+        startAutoSlide();
+      });
+    });
+
+    // Touch & swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselTrack.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoSlide();
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+      startAutoSlide();
+    }, { passive: true });
+
+    // Pause auto slide on hover
+    const container = $('.carousel-container');
+    if (container) {
+      container.addEventListener('mouseenter', stopAutoSlide);
+      container.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    startAutoSlide();
+  }
+
 })();
