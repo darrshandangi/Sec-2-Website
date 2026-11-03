@@ -322,6 +322,34 @@
   fill: currentColor !important;
 }
 
+
+/* Force header and nav to single line */
+.pantheone-header__inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+}
+.pantheone-nav {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 20px !important;
+}
+.pantheone-nav a {
+  font-size: 0.78rem !important;
+  letter-spacing: 0.08em !important;
+  white-space: nowrap !important;
+}
+.header-actions {
+  flex-shrink: 0 !important;
+}
+.header-actions .btn-pantheone {
+  white-space: nowrap !important;
+  padding: 8px 18px !important;
+}
+
 </style>
 </head>
 <body>

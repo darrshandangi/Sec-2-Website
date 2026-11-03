@@ -180,16 +180,26 @@ button {
 }
 
 /* Main Navigation Menu across all 5 pages */
+.pantheone-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 20px;
+}
+
 .pantheone-nav {
   display: flex;
   align-items: center;
-  gap: 36px;
+  flex-wrap: nowrap;
+  gap: 22px;
 }
 .pantheone-nav a {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
   color: var(--text-secondary);
   position: relative;
   padding-block: 4px;
@@ -223,7 +233,8 @@ button {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+  flex-shrink: 0;
+  gap: 12px;
 }
 
 /* Refined Pill Buttons */
