@@ -1390,7 +1390,295 @@ button {
   margin-bottom: 36px;
 }
 
-/* Responsive */
+/* ============================================================
+   GOOGLE MAP & SOCIAL LINKS IN FOOTER
+   ============================================================ */
+.footer-map-container {
+  margin-top: 48px;
+  margin-bottom: 40px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  background: var(--bg-white);
+}
+.footer-map-header {
+  padding: 16px 24px;
+  background: #F8F9FA;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-map-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-map-address {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.footer-map-iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  display: block;
+}
+
+/* Social Media Icons */
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+}
+.social-icon-btn:hover {
+  background: var(--text-primary);
+  color: #FFFFFF;
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+.social-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Floating WhatsApp / Concierge Button */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.floating-whatsapp-btn:hover {
+  background: #20BA5A;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+  color: #FFFFFF;
+}
+.floating-whatsapp-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #FFFFFF;
+}
+
+/* Support Page Enhanced Styles (contact.html) */
+.support-hero-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.support-photo-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+  transition: transform 0.25s ease;
+}
+.support-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.support-photo-card img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+.support-photo-caption {
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: center;
+}
+
+.order-tracker-card {
+  background: linear-gradient(135deg, #FAF8F2 0%, #FFFFFF 100%);
+  border: 1px solid #EFE4CC;
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-subtle);
+  text-align: center;
+}
+.order-tracker-form {
+  display: flex;
+  gap: 14px;
+  max-width: 680px;
+  margin: 24px auto 0;
+  flex-wrap: wrap;
+}
+.order-tracker-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #FFFFFF;
+  outline: none;
+}
+.order-tracker-input:focus {
+  border-color: var(--accent-gold);
+}
+
+.contact-quick-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.contact-quick-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+.contact-quick-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+.contact-quick-card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--accent-gold);
+}
+.contact-quick-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+.contact-quick-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.contact-quick-card a.card-action {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-block;
+}
+
+.support-policy-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+.support-policy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+.support-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+.support-step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--bg-stone);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+.support-step-num {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.trust-legal-box {
+  background: var(--bg-stone);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Responsive updates */
+@media (max-width: 992px) {
+  .support-hero-gallery,
+  .support-policy-grid,
+  .trust-legal-box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .contact-quick-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .support-photo-card img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-quick-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .order-tracker-form {
+    flex-direction: column;
+  }
+  .floating-whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 0.78rem;
+  }
+}
 @media (max-width: 992px) {
   .split-feature-grid,
   .shop-grid,
