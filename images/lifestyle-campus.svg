@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-SCENE // 01" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141722" />
+      <stop offset="100%" stop-color="#08090E" />
+    </linearGradient>
+    <radialGradient id="light-leak-SCENE // 01" cx="80%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#B76E79" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#B76E79" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="dot-grid-SCENE // 01" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#ffffff" fill-opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg-SCENE // 01)" />
+  <rect width="100%" height="100%" fill="url(#dot-grid-SCENE // 01)" />
+  <rect width="100%" height="100%" fill="url(#light-leak-SCENE // 01)" />
+
+  <!-- Diagonal Atmospheric Light Blade -->
+  <polygon points="500,0 800,0 450,520 200,520" fill="#B76E79" fill-opacity="0.06" />
+
+  <!-- Technical Index Number -->
+  <text x="50" y="90" font-family="'Bebas Neue', sans-serif" font-size="54" letter-spacing="4" fill="#B76E79" fill-opacity="0.7">SCENE // 01</text>
+
+  <!-- Central Silhouette Graphic of FoldBeat in Context -->
+  <g transform="translate(240, 160)">
+    <!-- Reflection plane -->
+    <ellipse cx="160" cy="180" rx="200" ry="24" fill="#000000" fill-opacity="0.6" />
+    <!-- Folded Speaker Silhouette in isometric slant -->
+    <rect x="50" y="40" width="100" height="130" rx="14" fill="#141418" stroke="#B76E79" stroke-width="2" transform="skewY(-10)" />
+    <rect x="160" y="20" width="100" height="130" rx="14" fill="#1A1A22" stroke="#B76E79" stroke-width="2" transform="skewY(10)" />
+    <!-- Hinge Bar -->
+    <rect x="145" y="15" width="20" height="145" rx="6" fill="#B76E79" stroke="#ffffff" stroke-width="1" />
+  </g>
+
+  <!-- Editorial Card Bottom Info -->
+  <rect x="0" y="400" width="800" height="120" fill="#0A0A0C" fill-opacity="0.85" />
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#B76E79" stroke-width="1" stroke-opacity="0.3" />
+  
+  <text x="40" y="445" font-family="'Bebas Neue', sans-serif" font-size="28" letter-spacing="2" fill="#FFFFFF">CAMPUS MOBILITY</text>
+  <text x="40" y="475" font-family="'Inter', sans-serif" font-size="13" font-weight="300" fill="#A8A8A8">Minimal footprint in your bag. Expansive sound field for the quad.</text>
+  
+  <!-- Right edge micro-data -->
+  <text x="760" y="450" font-family="'Inter', monospace" font-size="11" letter-spacing="3" fill="#B76E79" text-anchor="end">FOLDBEAT // ED-01</text>
+</svg>

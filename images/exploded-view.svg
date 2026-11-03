@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="copper-wire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2A499" />
+      <stop offset="50%" stop-color="#B76E79" />
+      <stop offset="100%" stop-color="#C98B6B" />
+    </linearGradient>
+    <pattern id="grid-matrix" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#222228" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="1.5" fill="#B76E79" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0E0E11" />
+  <rect width="100%" height="100%" fill="url(#grid-matrix)" />
+
+  <line x1="80" y1="340" x2="1020" y2="340" stroke="#B76E79" stroke-width="1.2" stroke-dasharray="6,6" stroke-opacity="0.6" />
+
+  <!-- 1. FRONT FACIA -->
+  <g transform="translate(110, 150)">
+    <rect x="0" y="0" width="100" height="380" rx="20" fill="#18181E" stroke="url(#copper-wire)" stroke-width="2" />
+    <circle cx="50" cy="190" r="42" fill="#0C0C0E" stroke="#B76E79" stroke-width="1.5" />
+    <circle cx="50" cy="190" r="32" fill="none" stroke="#E2A499" stroke-width="1" stroke-dasharray="2,4" />
+    <circle cx="50" cy="190" r="20" fill="none" stroke="#E2A499" stroke-width="1" stroke-dasharray="2,4" />
+    <text x="50" y="420" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#E2A499" text-anchor="middle">FACIA</text>
+    <text x="50" y="438" font-family="'Inter', sans-serif" font-size="9" fill="#888" text-anchor="middle">ANODIZED ALUM</text>
+  </g>
+
+  <line x1="220" y1="340" x2="280" y2="340" stroke="#B76E79" stroke-width="2" />
+
+  <!-- 2. TRANSDUCER DRIVER CORE -->
+  <g transform="translate(290, 180)">
+    <circle cx="70" cy="160" r="75" fill="#141418" stroke="url(#copper-wire)" stroke-width="2.5" />
+    <circle cx="70" cy="160" r="55" fill="#1C1C22" stroke="#B76E79" stroke-width="1.5" />
+    <circle cx="70" cy="160" r="35" fill="#241418" stroke="#E2A499" stroke-width="3" />
+    <circle cx="70" cy="160" r="20" fill="url(#copper-wire)" />
+    <text x="70" y="270" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#E2A499" text-anchor="middle">DRIVER CORE</text>
+    <text x="70" y="288" font-family="'Inter', sans-serif" font-size="9" fill="#888" text-anchor="middle">45MM NEODYMIUM</text>
+  </g>
+
+  <line x1="445" y1="340" x2="495" y2="340" stroke="#B76E79" stroke-width="2" />
+
+  <!-- 3. DUAL-AXIS HINGE -->
+  <g transform="translate(505, 110)">
+    <rect x="0" y="0" width="80" height="460" rx="14" fill="#18181E" stroke="url(#copper-wire)" stroke-width="2.5" />
+    <rect x="12" y="30" width="56" height="70" rx="8" fill="url(#copper-wire)" />
+    <rect x="12" y="130" width="56" height="70" rx="8" fill="url(#copper-wire)" />
+    <rect x="12" y="260" width="56" height="70" rx="8" fill="url(#copper-wire)" />
+    <rect x="12" y="360" width="56" height="70" rx="8" fill="url(#copper-wire)" />
+    <path d="M 40 40 L 40 420" stroke="#50E3C2" stroke-width="2" stroke-dasharray="4,4" />
+    <circle cx="40" cy="230" r="6" fill="#50E3C2" />
+    <text x="40" y="500" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#E2A499" text-anchor="middle">DUAL HINGE</text>
+    <text x="40" y="518" font-family="'Inter', sans-serif" font-size="9" fill="#888" text-anchor="middle">20,000 CYCLE BUS</text>
+  </g>
+
+  <line x1="595" y1="340" x2="655" y2="340" stroke="#B76E79" stroke-width="2" />
+
+  <!-- 4. ACOUSTIC CHAMBER -->
+  <g transform="translate(665, 160)">
+    <rect x="0" y="0" width="130" height="360" rx="20" fill="#14141A" stroke="url(#copper-wire)" stroke-width="2" />
+    <path d="M 20 60 Q 65 90 110 60" fill="none" stroke="#B76E79" stroke-width="1.8" />
+    <path d="M 20 120 Q 65 150 110 120" fill="none" stroke="#B76E79" stroke-width="1.8" />
+    <path d="M 20 180 Q 65 210 110 180" fill="none" stroke="#B76E79" stroke-width="1.8" />
+    <path d="M 20 240 Q 65 270 110 240" fill="none" stroke="#B76E79" stroke-width="1.8" />
+    <path d="M 20 300 Q 65 330 110 300" fill="none" stroke="#B76E79" stroke-width="1.8" />
+    <text x="65" y="405" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#E2A499" text-anchor="middle">CAVITY</text>
+    <text x="65" y="423" font-family="'Inter', sans-serif" font-size="9" fill="#888" text-anchor="middle">HELMHOLTZ TUNED</text>
+  </g>
+
+  <line x1="805" y1="340" x2="860" y2="340" stroke="#B76E79" stroke-width="2" />
+
+  <!-- 5. REAR CHASSIS & DSP -->
+  <g transform="translate(870, 150)">
+    <rect x="0" y="0" width="110" height="380" rx="20" fill="#18181E" stroke="url(#copper-wire)" stroke-width="2" />
+    <rect x="20" y="60" width="70" height="90" rx="8" fill="#0C0C0E" stroke="#50E3C2" stroke-width="1.2" />
+    <text x="55" y="110" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#50E3C2" text-anchor="middle">24-BIT DSP</text>
+    <rect x="20" y="180" width="70" height="150" rx="8" fill="#121214" stroke="#B76E79" stroke-width="1.2" />
+    <text x="55" y="260" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#E2A499" text-anchor="middle">LI-PO CELL</text>
+    <rect x="35" y="345" width="40" height="12" rx="4" fill="#282830" stroke="#E2A499" stroke-width="1" />
+    <text x="55" y="420" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#E2A499" text-anchor="middle">POWER / DSP</text>
+    <text x="55" y="438" font-family="'Inter', sans-serif" font-size="9" fill="#888" text-anchor="middle">TYPE-C FAST CHARGE</text>
+  </g>
+</svg>
