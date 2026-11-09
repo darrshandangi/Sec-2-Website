@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Craft & Philosophy | FoldBeat</title>
+  <title>The Craft (25BC149) & Philosophy | FoldBeat</title>
   
   <meta name="description" content="Discover the design philosophy and mechanical craftsmanship behind FoldBeat. Architectural sound engineered for modern living.">
   <link rel="stylesheet" href="css/styles.css">
@@ -79,6 +79,59 @@
   padding: 8px 18px !important;
 }
 
+
+/* Small & Side-by-Side Pamphlet Cards for Story */
+.brochure-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+  max-width: 540px !important;
+  margin: 0 auto !important;
+}
+.brochure-card {
+  flex: 1 !important;
+  max-width: 250px !important;
+  background: #FFFFFF !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  text-align: center !important;
+}
+.brochure-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14) !important;
+  border-color: var(--accent-gold) !important;
+}
+.brochure-card img {
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: #FAF9F6 !important;
+  padding: 6px !important;
+}
+.brochure-badge {
+  background: #FFFFFF !important;
+  padding: 10px 14px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border-light) !important;
+  letter-spacing: 0.04em !important;
+}
+@media (max-width: 600px) {
+  .brochure-container {
+    flex-direction: row !important;
+    gap: 12px !important;
+  }
+  .brochure-card img {
+    height: 190px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -101,7 +154,7 @@
         <a href="index.html">HOME (25BC165)</a>
         <a href="shop.html">SHOP (25BC166)</a>
         <a href="diwali-sale.html" class="nav-diwali-tag">Diwali (25BC164) 🪔</a>
-        <a href="story.html" class="active">The Craft</a>
+        <a href="story.html" class="active">The Craft (25BC149)</a>
         <a href="contact.html">Contact us (25BC148)</a>
       </nav>
 
@@ -112,6 +165,35 @@
   </header>
 
   <main>
+
+    <!-- Starting Pamphlet / Flyer Showcase (The Craft 25BC149) -->
+    <section style="background: var(--bg-stone); padding: 40px 0 24px; border-bottom: 1px solid var(--border-light); text-align: center;">
+      <div class="container">
+        <span class="editorial-sub">Official Craft Edition</span>
+        <h2 style="font-size: 2.1rem; margin-bottom: 8px;">The Craft of FoldBeat (25BC149)</h2>
+        <p style="color: var(--text-secondary); max-width: 580px; margin: 0 auto 24px; font-size: 0.95rem;">
+          Explore our design philosophy, mechanical hinge development, and acoustic architecture showcase below.
+        </p>
+
+        <!-- Compact Side-by-Side Pamphlet Cards -->
+        <div class="brochure-container">
+          <div class="brochure-card">
+            <a href="images/bhoomi-1.jpeg" target="_blank" title="Click to view full brochure">
+              <img src="images/bhoomi-1.jpeg" alt="The Craft Official Brochure Front (25BC149)">
+            </a>
+            <div class="brochure-badge">Official Brochure (Front) 🔍</div>
+          </div>
+
+          <div class="brochure-card">
+            <a href="images/bhoomi-2.jpeg" target="_blank" title="Click to view full brochure">
+              <img src="images/bhoomi-2.jpeg" alt="The Craft Acoustic Specs Back (25BC149)">
+            </a>
+            <div class="brochure-badge">Acoustic Specs (Back) 🔍</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Story Hero -->
     <section class="story-header-section">
@@ -135,7 +217,7 @@
           “We do not design speakers to hide away in a drawer. We design them to be touched, unfolded, and displayed as everyday art.”
         </blockquote>
         <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold);">
-          — FoldBeat Design Studio, Mumbai
+          — FoldBeat Design Studio
         </span>
       </div>
     </section>
@@ -173,7 +255,64 @@
       </div>
     </section>
 
-    <!-- Close-up Macro Showcase -->
+    
+    <!-- Additional Pillars of Craft (04 - 07) -->
+    <section style="padding: 20px 0 90px; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px;">
+          
+          <div>
+            <span class="editorial-sub">04 / The Postures</span>
+            <h3 style="margin-bottom: 14px;">Three Ways to Stand</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+              Open it like a book on your desk, spread it flat across a table, or fold it shut and slip it into a bag. The dual-axis hinge holds each position firmly, so the sound is aimed where you want it and the speaker stays where you put it.
+            </p>
+          </div>
+
+          <div>
+            <span class="editorial-sub">05 / The Tuning</span>
+            <h3 style="margin-bottom: 14px;">Tuned by Ear, Not by Spreadsheet</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+              Numbers only tell part of the story. We listened to acoustic guitars, vocals, bass-heavy playlists and podcasts, and adjusted the chambers until each one sounded natural. The aim was warmth at low volume and clarity at high volume.
+            </p>
+          </div>
+
+          <div>
+            <span class="editorial-sub">06 / The Finishes</span>
+            <h3 style="margin-bottom: 14px;">Five Finishes, One Form</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+              Matte Black Stealth, Navy and Gold, Forest Green and Gold, Champagne and Silver, and Plum and Silver. The form stays the same, and the colour changes the character. Choose the one that suits your shelf, your desk or your bag.
+            </p>
+          </div>
+
+          <div>
+            <span class="editorial-sub">07 / The Journey</span>
+            <h3 style="margin-bottom: 14px;">Made to Travel</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+              A speaker should not stay at home because it is awkward to carry. FoldBeat closes to a slim, pocket-sized shape that protects the grilles and hinge, then opens into a speaker that fills the room.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Built From Listening Research Feature -->
+    <section style="padding: 80px 0; background: #FFFFFF; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div style="max-width: 820px; margin: 0 auto; text-align: left;">
+          <span class="editorial-sub">Built From Listening</span>
+          <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-bottom: 20px; line-height: 1.3;">We asked 55 people what frustrates them. Then we designed around it.</h2>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; color: var(--text-secondary);">
+            Among the 36 who already use a portable speaker, 72% named short battery life, 64% poor sound and 56% bulky size. FoldBeat answers each one with long playtime, dual acoustic chambers and a fold that fits a pocket.
+          </p>
+          <a href="shop.html" class="btn-pantheone btn-dark btn-sm">See the collection &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+<!-- Close-up Macro Showcase -->
     <section style="padding: 80px 0; background: var(--bg-stone); border-top: 1px solid var(--border-light);">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
@@ -208,16 +347,16 @@
 
           <!-- Social Media Icons -->
           <div class="footer-social-row">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+            <a href="https://instagram.com/foldbeat" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
               <svg viewBox="0 0 24 24" width="18" height="18" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;fill:currentColor;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X / Twitter">
+            <a href="https://twitter.com/foldbeat" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X / Twitter">
               <svg viewBox="0 0 24 24" width="18" height="18" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;fill:currentColor;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn">
+            <a href="https://linkedin.com/company/foldbeat" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" width="18" height="18" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;fill:currentColor;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+            <a href="https://youtube.com/@foldbeat" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
               <svg viewBox="0 0 24 24" width="18" height="18" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;fill:currentColor;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
           </div>
@@ -273,7 +412,7 @@
       </div>
 
       <div class="footer-bottom-bar">
-        <p>&copy; 2025 FoldBeat Audio Private Limited. All rights reserved. | <a href="contact.html#trust">Privacy Policy</a> | <a href="contact.html#trust">Terms</a> | <a href="contact.html#returns">Refunds</a></p>
+        <p>&copy; 2026 FoldBeat Audio Private Limited. All rights reserved. | <a href="contact.html#trust">Privacy Policy</a> | <a href="contact.html#trust">Terms</a> | <a href="contact.html#returns">Refunds</a></p>
         <p>Part sculpture. All sound.</p>
       </div>
     </div>
