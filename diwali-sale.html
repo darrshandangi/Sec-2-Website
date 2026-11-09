@@ -409,6 +409,59 @@
   padding: 8px 18px !important;
 }
 
+
+/* Small & Side-by-Side Pamphlet Cards for Diwali */
+.brochure-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+  max-width: 540px !important;
+  margin: 0 auto !important;
+}
+.brochure-card {
+  flex: 1 !important;
+  max-width: 250px !important;
+  background: #FFFFFF !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  text-align: center !important;
+}
+.brochure-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14) !important;
+  border-color: var(--accent-gold) !important;
+}
+.brochure-card img {
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: #FAF9F6 !important;
+  padding: 6px !important;
+}
+.brochure-badge {
+  background: #FFFFFF !important;
+  padding: 10px 14px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border-light) !important;
+  letter-spacing: 0.04em !important;
+}
+@media (max-width: 600px) {
+  .brochure-container {
+    flex-direction: row !important;
+    gap: 12px !important;
+  }
+  .brochure-card img {
+    height: 190px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -445,6 +498,35 @@
   </header>
 
   <main>
+
+    <!-- Starting Pamphlet / Flyer Showcase (Diwali 25BC164) -->
+    <section style="background: var(--festive-bg); padding: 40px 0 24px; border-bottom: 1px solid var(--border-light); text-align: center;">
+      <div class="container">
+        <span class="editorial-sub" style="color: #B45309;">Festive Showcase</span>
+        <h2 style="font-size: 2.1rem; margin-bottom: 8px; color: #111822;">Diwali Festive Edition (25BC164)</h2>
+        <p style="color: #5C5242; max-width: 580px; margin: 0 auto 24px; font-size: 0.95rem;">
+          Explore our exclusive festive flyer and Diwali gift curation brochure below.
+        </p>
+
+        <!-- Compact Side-by-Side Pamphlet Cards -->
+        <div class="brochure-container">
+          <div class="brochure-card">
+            <a href="images/daniyal-1.jpeg" target="_blank" title="Click to view full brochure">
+              <img src="images/daniyal-1.jpeg" alt="Diwali Festive Flyer Front (25BC164)">
+            </a>
+            <div class="brochure-badge">Festive Brochure (Front) 🔍</div>
+          </div>
+
+          <div class="brochure-card">
+            <a href="images/daniyal-2.jpeg" target="_blank" title="Click to view full brochure">
+              <img src="images/daniyal-2.jpeg" alt="Diwali Festive Specs Back (25BC164)">
+            </a>
+            <div class="brochure-badge">Acoustic Specs (Back) 🔍</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- 2. Hero Section -->
     <section class="diwali-hero-v2">
